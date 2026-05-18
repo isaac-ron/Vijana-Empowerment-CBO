@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-primary: #790506;
+  --color-primary-container: #9b221b;
+  --color-primary-fixed: #ffdad5;
+  --color-primary-fixed-dim: #ffb4aa;
+
+  --color-secondary: #9d4400;
+  --color-secondary-container: #fd7c28;
+  --color-secondary-fixed: #ffdbca;
+  --color-secondary-fixed-dim: #ffb690;
+
+  --color-tertiary: #4d3600;
+  --color-tertiary-container: #6b4b00;
+  --color-tertiary-fixed: #ffdea7;
+  --color-tertiary-fixed-dim: #ffbb1e;
+
+  /* Off-White Surface Palette */
+  --color-surface: #FAF9F6; /* Warmer off-white */
+  --color-surface-container: #F2F0E9;
+  --color-surface-container-low: #F5F3ED;
+  --color-surface-container-high: #EBE8DF;
+  --color-surface-container-highest: #E0DDD2;
+  --color-surface-variant: #E0DDD2;
+  --color-surface-bright: #FAF9F6;
+  --color-surface-dim: #DAD7CB;
+
+  --color-on-surface: #121c2a;
+  --color-on-surface-variant: #59413e;
+
+  --color-inverse-surface: #27313f;
+  --color-inverse-on-surface: #FAF9F6;
+  --color-outline: #8d716d;
+  --color-outline-variant: #e0bfba;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base resets */
+html, body {
+  background-color: #FAF9F6; /* Global Off-White */
+  color: #121c2a;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope), sans-serif;
+}
+
+/* Custom utility for the main container to ensure consistent spacing */
+.main-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
