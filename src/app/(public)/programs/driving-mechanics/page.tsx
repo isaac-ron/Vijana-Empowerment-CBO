@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 
 export const metadata: Metadata = {
   title: 'Vijana Wheels | Driving & Mechanics Program',
@@ -183,106 +184,31 @@ export default function WheelsPage() {
       </section>
 
       {/* Enrollment */}
-      <section id="enroll" className="py-32 bg-cream-to-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="flex flex-col md:flex-row gap-20">
-            <div className="flex-1 space-y-12 pr-0 md:pr-12">
-              <div>
-                <h2 className="text-display-lg-mobile md:text-display-lg text-primary mb-6">
-                  Ready to Start Your Journey?
-                </h2>
-                <p className="text-body-lg text-on-surface-variant leading-relaxed">
-                  Join our next intake. New classes begin every first Monday of the month with
-                  flexible morning and evening shifts.
-                </p>
-              </div>
-              <div className="space-y-10 border-l border-outline-variant/30 ml-4 pl-8 relative">
-                {[
-                  {
-                    n: 1,
-                    title: 'Submit Application',
-                    body: 'Complete the online inquiry below or visit our Sotik hub with your National ID.',
-                  },
-                  {
-                    n: 2,
-                    title: 'Assessment Interview',
-                    body: 'A brief aptitude and health assessment with our team to confirm fit for the program.',
-                  },
-                  {
-                    n: 3,
-                    title: 'Commence Training',
-                    body: 'Step into the classroom and behind the wheel to start building your future.',
-                  },
-                ].map((step) => (
-                  <div key={step.n} className="relative">
-                    <div className="absolute -left-[49px] top-0 w-8 h-8 rounded-full border-4 border-surface bg-primary text-white flex items-center justify-center font-bold text-sm">
-                      {step.n}
-                    </div>
-                    <h4 className="text-headline-sm text-on-surface mb-2">{step.title}</h4>
-                    <p className="text-body-md text-on-surface-variant">{step.body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex-1 w-full max-w-md md:max-w-none mx-auto">
-              <form className="bg-surface-container-highest/30 rounded-[2rem] p-10 border border-outline-variant/20 space-y-6 backdrop-blur-sm">
-                <h3 className="text-headline-sm text-primary mb-8 border-b border-outline-variant/30 pb-4">
-                  Enrollment Inquiry
-                </h3>
-                <div>
-                  <label className="block text-label-md text-on-surface mb-2" htmlFor="wheels-name">
-                    Full Name
-                  </label>
-                  <input
-                    id="wheels-name"
-                    name="name"
-                    className="w-full px-4 py-3 rounded-xl border border-outline-variant bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                    placeholder="John Doe"
-                    type="text"
-                  />
-                </div>
-                <div>
-                  <label className="block text-label-md text-on-surface mb-2" htmlFor="wheels-phone">
-                    Phone Number
-                  </label>
-                  <input
-                    id="wheels-phone"
-                    name="phone"
-                    className="w-full px-4 py-3 rounded-xl border border-outline-variant bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                    placeholder="+254 700 000 000"
-                    type="tel"
-                  />
-                </div>
-                <div>
-                  <label className="block text-label-md text-on-surface mb-2" htmlFor="wheels-interest">
-                    Primary Interest
-                  </label>
-                  <select
-                    id="wheels-interest"
-                    name="interest"
-                    className="w-full px-4 py-3 rounded-xl border border-outline-variant bg-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all appearance-none cursor-pointer"
-                    defaultValue="Professional Driving (Class B/C/E)"
-                  >
-                    <option>Professional Driving (Class B/C/E)</option>
-                    <option>Automotive Mechanics</option>
-                    <option>Combined Fleet Management</option>
-                  </select>
-                </div>
-                <button
-                  className="w-full bg-primary text-on-primary py-4 rounded-xl text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all shadow-lg active:scale-95 mt-6"
-                  type="submit"
-                >
-                  Submit Application
-                </button>
-                <p className="text-center text-label-sm text-on-surface-variant pt-4 opacity-80">
-                  No application fee. Sponsored slots available for eligible youth.
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProgramEnrollmentForm
+        sectionId="enroll"
+        formTitle="Vijana Wheels Enrollment"
+        sectionHeading="Ready to Start Your Journey?"
+        sectionLead="Join our next intake. New classes begin every first Monday of the month with flexible morning and evening shifts."
+        steps={[
+          {
+            title: 'Submit Application',
+            body: 'Complete the online inquiry below or visit our Sotik hub with your National ID.',
+          },
+          {
+            title: 'Assessment Interview',
+            body: "A brief aptitude and health assessment with our team to confirm you're fit for professional driving.",
+          },
+          {
+            title: 'Commence Training',
+            body: 'Step into the classroom and behind the wheel to start building your future.',
+          },
+        ]}
+        interestOptions={[
+          'Professional Driving (Class B/C/E)',
+          'Automotive Mechanics',
+          'Combined Fleet Management',
+        ]}
+      />
     </main>
   );
 }

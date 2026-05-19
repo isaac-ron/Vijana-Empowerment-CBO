@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import DonationForm from '@/components/forms/DonationForm';
 
 export const metadata: Metadata = {
   title: 'Get Involved | Vijana Empowerment Initiative',
@@ -226,70 +227,7 @@ export default function GetInvolvedPage() {
                   </p>
                 </div>
               </div>
-              <form className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {[
-                    { val: 'KES 5K', label: 'Basic Kit' },
-                    { val: 'KES 15K', label: 'One Trainee' },
-                    { val: 'Custom', label: 'Enter Amount' },
-                  ].map((opt) => (
-                    <label
-                      key={opt.val}
-                      className="flex flex-col items-center justify-center p-6 border-2 border-outline-variant/50 rounded-2xl cursor-pointer hover:border-secondary transition-all bg-white"
-                    >
-                      <span className="text-headline-sm text-primary mb-1">{opt.val}</span>
-                      <span className="text-label-sm text-on-surface-variant">{opt.label}</span>
-                    </label>
-                  ))}
-                </div>
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-label-md mb-2" htmlFor="donor-name">Full Name</label>
-                    <input
-                      id="donor-name"
-                      name="name"
-                      className="w-full px-4 py-3 rounded-xl border border-outline-variant/50 bg-white focus:ring-2 focus:ring-secondary focus:border-secondary transition-all"
-                      placeholder="John Doe"
-                      type="text"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-label-md mb-2" htmlFor="donor-email">Email Address</label>
-                    <input
-                      id="donor-email"
-                      name="email"
-                      className="w-full px-4 py-3 rounded-xl border border-outline-variant/50 bg-white focus:ring-2 focus:ring-secondary focus:border-secondary transition-all"
-                      placeholder="you@example.com"
-                      type="email"
-                    />
-                  </div>
-                </div>
-                <div className="pt-4 border-t border-outline-variant/30">
-                  <p className="text-label-md text-primary mb-4">Preferred Payment Method</p>
-                  <div className="flex gap-4 mb-8">
-                    <button
-                      className="flex-1 py-3 bg-white rounded-xl border-2 border-outline-variant/50 text-label-md flex items-center justify-center gap-2 hover:border-secondary transition-colors"
-                      type="button"
-                    >
-                      <span className="material-symbols-outlined text-secondary-container">smartphone</span>
-                      M-Pesa
-                    </button>
-                    <button
-                      className="flex-1 py-3 bg-white rounded-xl border-2 border-outline-variant/50 text-label-md flex items-center justify-center gap-2 hover:border-secondary transition-colors"
-                      type="button"
-                    >
-                      <span className="material-symbols-outlined text-primary">credit_card</span>
-                      Card
-                    </button>
-                  </div>
-                  <button
-                    className="w-full bg-primary text-on-primary py-4 rounded-full text-headline-sm shadow-lg hover:bg-primary-container active:scale-95 transition-all"
-                    type="submit"
-                  >
-                    Confirm Donation
-                  </button>
-                </div>
-              </form>
+              <DonationForm />
             </div>
 
             {/* Partnership / apply */}

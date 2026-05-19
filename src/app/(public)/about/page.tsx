@@ -8,35 +8,73 @@ export const metadata: Metadata = {
     'A community-based organization in Sotik Sub-County, Bomet County, serving teenage mothers, orphans, persons with disabilities, and youth seeking self-employment.',
 };
 
-const TEAM = [
+type Member = {
+  name: string;
+  role: string;
+  bio: string;
+  src: string;
+};
+
+// NOTE: names + bios are placeholders for client preview; swap for real
+// leadership details once finalized.
+const LEADERSHIP: Member[] = [
   {
     name: 'John Doe',
     role: 'Executive Director',
-    aspect: 'aspect-[4/5]',
-    offset: '',
+    bio: 'Founding director with 15+ years guiding community development and TVET initiatives across Bomet County.',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBgKUaRehonS9q-Lr5ZPrNVwxvpXOfxGo8lNWiTkjbqLgLaVnIXrR1HEfHEfUwX-pLL1RrXpB3ZGDDBB7-SXk5kTjzuQNfnPCBuhF3yeIlOZciSlXqmaluM6jBV-c2Gu-vzbnh41452pORlXFLyMzPgysWTAUEFC_8ATKLP2Q4B7o_z0ONlIlhz4QjEmlgpCtlx-cYCcpzihecOeT6wa9pm4V0oahg_Xu6zClj4u0eDI6yWSHf-9-w9QB9cCWDxTOQ9WrbcBGNVL8fD',
   },
   {
     name: 'Jane Smith',
     role: 'Programs Coordinator',
-    aspect: 'aspect-square',
-    offset: 'pt-0 lg:pt-12',
+    bio: 'Designs curriculum and tracks learner outcomes across all four vocational tracks.',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBeqdurTX5hq5O7oJdiwNduikJ3h4AWoYAyzUrvPVrhFvbtHZs4rIw3oRmR9_55dH_evM3ApCgKpV5AWfek5MDOrjZ7hUOhx-5Xt-0xyM32hsA_-uxVulSirf814ahecDuE3ceVfHuijWLnUJN-nQBy_vrMXKiETUvFjyrV3mIB70kd0j0VoFDWHN5uPFJvF7oiZO7pscZjbT62pX4qHk1gsT2UXqbUuW3rFLqnhY0b7ltShoU43yBI1STHUWF_EzPaW_3EQ2No502o',
   },
   {
     name: 'John Smith',
     role: 'Community Liaison',
-    aspect: 'aspect-[4/5]',
-    offset: '',
+    bio: 'Connects the initiative with chiefs, faith leaders, and local government partners across Sotik.',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3TqBNoDZPL_6wt-cmTv9z2ey0-GuCyUCWEI2sHfrEFk1zTA9HO7nnFmT5Me2QxEf0Vy7vkP5p4Fh8bfF4cFM9KCQtNNcbmF_jM0t-ZR9ztrfTnIQajWy50ZsEH4n4mgIa5lgXp6t4ySFdRYIrTDAtSp9MtClvPWkNMzo5sTUPMUyguyjn-95LVYA1u4mHQBDE8L6qBpNhcPlVbzLhW1szPyT87o4HSKlhQulAhjNSrYDGkpBqtoJ7-QRfC4X7OM6VYa_j9XiG95JK',
   },
   {
     name: 'Jane Doe',
     role: 'Finance & Operations',
-    aspect: 'aspect-square',
-    offset: 'pt-0 lg:pt-12',
+    bio: 'Stewards day-to-day finances, donor reporting, and compliance with the Department of Social Services.',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDLady_l-Rsqh3Vn2fGEiB-vQjAXDq44rFbVHt0r08lkcU1dhd5cuESHB-rzVHOcdfqZSjhRJTmS2gKxNc-ny37zY5ZEn3TUCU2-oW0e_OwhrVOcWVQd6YBjVPK6spaXTULkN-fhkfqhEoe27DWxXxioGbM07gzkYshymOSngnrzlAp6MsK2G1WfIf5GILQE25BqXFLzH4mEqOQnGSDWEcwS1K55BppAR0FbfjG6ZfvvfFnS8gvwwL1aG46VUdobAz-qe4kfw9OGpKw',
   },
+];
+
+const INSTRUCTORS: Member[] = [
+  {
+    name: 'Mary Kemboi',
+    role: 'Lead Instructor — Vijana Fashion Forge',
+    bio: 'Tailor and pattern-maker with 12 years running her own workshop in Sotik town.',
+    src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&auto=format&fit=crop',
+  },
+  {
+    name: 'Linet Cherono',
+    role: 'Lead Instructor — Glow with Vijana',
+    bio: 'Salon owner and certified beauty therapist focused on locally-sourced product mastery.',
+    src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop',
+  },
+  {
+    name: 'Peter Mutai',
+    role: 'Lead Instructor — Vijana Wheels',
+    bio: 'NTSA-certified driving instructor and mechanic, formerly with a regional logistics fleet.',
+    src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format&fit=crop',
+  },
+  {
+    name: 'Brian Korir',
+    role: 'Lead Instructor — Vijana Digital Hub',
+    bio: 'Freelance web developer and digital-marketing trainer, building youth into remote workers.',
+    src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format&fit=crop',
+  },
+];
+
+const ED_STATEMENTS = [
+  'When we registered Vijana Empowerment Initiative, we set ourselves a simple test: would a young mother walking past our hub on her way to fetch water see a future for herself inside it? Every decision we make is measured against that question.',
+  'We are not a substitute for the public TVET system — we are a bridge. We meet learners where they are, equip them with skills the local market will actually pay for, and walk with them into their first job or their first business.',
+  'To our partners and donors: we promise transparency. Every shilling has an owner, and that owner is a young person in Sotik whose life is changing because you chose to invest in them.',
 ];
 
 export default function AboutPage() {
@@ -313,42 +351,135 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-24 bg-surface-container-low">
+      {/* Executive Director statement */}
+      <section id="director" className="py-24 bg-surface">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 border-b border-surface-dim/40 pb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div className="lg:col-span-4">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src={LEADERSHIP[0].src}
+                  alt={`Portrait of ${LEADERSHIP[0].name}, ${LEADERSHIP[0].role}`}
+                  width={500}
+                  height={625}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="mt-6">
+                <p className="text-label-md uppercase tracking-widest text-secondary mb-2">
+                  Executive Director
+                </p>
+                <h3 className="text-headline-sm text-on-surface">{LEADERSHIP[0].name}</h3>
+                <p className="text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                  {LEADERSHIP[0].bio}
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-8 space-y-8">
+              <p className="text-label-md uppercase tracking-widest text-secondary">
+                A word from our director
+              </p>
+              <h2 className="text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                &ldquo;Skills, dignity, and a path forward &mdash; that&rsquo;s the work.&rdquo;
+              </h2>
+              <div className="space-y-6 border-l-4 border-secondary pl-8">
+                {ED_STATEMENTS.map((paragraph) => (
+                  <p
+                    key={paragraph.slice(0, 24)}
+                    className="text-body-lg text-on-surface-variant leading-relaxed"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              <div className="flex items-center gap-4 pt-4">
+                <div className="h-px flex-1 bg-outline-variant/40" />
+                <p className="text-label-md uppercase tracking-widest text-on-surface-variant">
+                  &mdash; {LEADERSHIP[0].name}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section id="team" className="py-24 bg-surface-container-low">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 border-b border-surface-dim/40 pb-12">
             <div className="max-w-2xl">
+              <p className="text-label-md uppercase tracking-widest text-secondary mb-3">
+                Our People
+              </p>
               <h2 className="text-display-lg-mobile text-on-surface mb-6">Led by the Community</h2>
               <p className="text-body-lg text-on-surface-variant leading-relaxed">
-                Our team is a group of community members, educators, and local entrepreneurs who
-                came together because they intimately understand the landscape of Sotik and the
-                wider Bomet County.
+                Community members, educators, and local entrepreneurs who came together because
+                they intimately understand the landscape of Sotik and the wider Bomet County.
               </p>
             </div>
             <Link
               href="/get-involved"
-              className="border border-secondary text-secondary px-8 py-3 rounded-full text-label-md hover:bg-secondary hover:text-white transition-all"
+              className="border border-secondary text-secondary px-8 py-3 rounded-full text-label-md uppercase tracking-widest hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
             >
               Join the Team
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
-            {TEAM.map((m) => (
-              <div key={m.name} className={`group flex flex-col ${m.offset}`}>
-                <div className={`overflow-hidden mb-6 ${m.aspect} w-full rounded-2xl shadow-md`}>
-                  <Image
-                    src={m.src}
-                    alt={`Portrait of ${m.name}`}
-                    width={400}
-                    height={500}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  />
-                </div>
-                <h3 className="text-headline-sm text-on-surface mb-1">{m.name}</h3>
-                <p className="text-body-md text-primary">{m.role}</p>
-              </div>
-            ))}
+
+          <div className="mb-16">
+            <p className="text-label-md uppercase tracking-widest text-on-surface-variant mb-10">
+              Leadership
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+              {LEADERSHIP.map((m) => (
+                <article key={m.name} className="group flex flex-col">
+                  <div className="overflow-hidden mb-5 aspect-[4/5] w-full rounded-2xl shadow-md bg-surface-container-highest">
+                    <Image
+                      src={m.src}
+                      alt={`Portrait of ${m.name}`}
+                      width={400}
+                      height={500}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
+                  <h3 className="text-headline-sm text-on-surface mb-1">{m.name}</h3>
+                  <p className="text-label-md text-primary uppercase tracking-widest mb-3">{m.role}</p>
+                  <p className="text-body-md text-on-surface-variant leading-relaxed">{m.bio}</p>
+                </article>
+              ))}
+            </div>
           </div>
+
+          <div className="border-t border-surface-dim/40 pt-12">
+            <p className="text-label-md uppercase tracking-widest text-on-surface-variant mb-10">
+              Lead Instructors
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+              {INSTRUCTORS.map((m) => (
+                <article key={m.name} className="group flex flex-col">
+                  <div className="overflow-hidden mb-5 aspect-[4/5] w-full rounded-2xl shadow-md bg-surface-container-highest">
+                    <Image
+                      src={m.src}
+                      alt={`Portrait of ${m.name}`}
+                      width={400}
+                      height={500}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
+                  <h3 className="text-headline-sm text-on-surface mb-1">{m.name}</h3>
+                  <p className="text-label-md text-primary uppercase tracking-widest mb-3">{m.role}</p>
+                  <p className="text-body-md text-on-surface-variant leading-relaxed">{m.bio}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <p className="mt-16 text-center text-body-md text-on-surface-variant">
+            Plus a growing circle of volunteer mentors, alumni, and community partners.{' '}
+            <Link href="/get-involved" className="text-secondary hover:text-primary transition-colors">
+              Get in touch
+            </Link>{' '}
+            if you&rsquo;d like to lend your skills.
+          </p>
         </div>
       </section>
     </main>

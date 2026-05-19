@@ -7,8 +7,8 @@ const PROGRAMS = [
     tag: 'Fashion & Textiles',
     title: 'Vijana Fashion Forge',
     body: 'Modern garment design, pattern making, and textile entrepreneurship.',
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDfcJew_TNqMTkjCuDtRaJPtPLLOJGThgpEJs9FFCSgtJ8erRanj9FIp4iaAcD9pkvWmX2UJNuNck05gure5T_j-dlzYslMuuelRAcc2UhTmzQFgNP3mwTvmiJ52CVbzA7Q8-95lkqych0dtZWWRYApXYSjlV64OpoXWx0TQQNiHxBhJhg6BsEIoeYzvB59HiuPRtxy79bynUSp3I9bZDQOVmoiIBw6Ggw2uIVm39ApmGSEo_m2QKciab6b9-mh_6iTWZYyR2MWJ-bO',
-    alt: 'Hands sewing on a denim garment in a fashion studio',
+    src: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=900&q=80&auto=format&fit=crop',
+    alt: 'Hands working a sewing machine in a tailor’s workshop',
     offset: false,
   },
   {
@@ -16,8 +16,8 @@ const PROGRAMS = [
     tag: 'Cosmetology',
     title: 'Glow with Vijana',
     body: 'Professional beauty therapy, skin care, and salon management training.',
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCWVi-AlrtDzpqWM22VStRm3EH-wHLX9TYmKgun9sVxbY2hbkA8eneOv2YfHmTw2vxwkJVC9-08VP69qkcNUUcJ5K2cJDMwgeomxLldicoMhs12_OpsAVD8_MC6qiSrR2pd5OBxlT3POV6INNckpq1V_3MCS5MKlMTWNZ-HXM5uxRq_jSjscF4JRxINkawwZgarI-3lq2kEib7LSV1LUrg8OxJtWxsTc25As82y5CFDXwUkjx4UKJXfWtY2zsDkpkV_E2MoOq8K6Awf',
-    alt: 'Beauty student practicing skincare in a bright salon',
+    src: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80&auto=format&fit=crop',
+    alt: 'Stylist working on a client at a professional salon station',
     offset: true,
   },
   {
@@ -25,8 +25,8 @@ const PROGRAMS = [
     tag: 'Driving & Mechanics',
     title: 'Vijana Wheels',
     body: 'Practical driving, traffic-safety certification, and vehicle maintenance.',
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAULmGvyg57WA9Gv2GiU0s_lFGOkOJYoaQuUjKaMhsoOT_lClAXz3uJCIpF4ZMBiJV8U-gGyO-ISgsC_DjD-osDtouFp_VYO5Pxbp3Fa7lxTbsY945XeGLyX6nDHkFQEm7LSOqVGsC6hn-PaEmWwRQHPPym-Klc7K0Svabkz3CLrBkmjKzCQ2DdbKqVojjSZHfDHX5x4jVCXRexuYSLSo52FsXHPdFiVzGwgh2iQooS-rgGUf5UfHcKbHsNiw4c7y72go4-cFECEVqF',
-    alt: 'Students learning engine maintenance in a training garage',
+    src: 'https://images.unsplash.com/photo-1486754735734-325b5831c3ad?w=900&q=80&auto=format&fit=crop',
+    alt: 'Mechanic inspecting a vehicle engine in a workshop',
     offset: false,
   },
   {
@@ -34,8 +34,8 @@ const PROGRAMS = [
     tag: 'ICT',
     title: 'Vijana Digital Hub',
     body: 'Computer literacy, web development, data entry, and digital marketing.',
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCzFH73a9rsiPJMCr8O0QAiCqmoAwiMe0lBn475ECjocm8ITJCnA01_aZgCRm9LDrsOICg96_5ko6KcObLx1fsEMkDqB3YHBFT_JnUArL1SsYKpnPOpH0tRXyFIWCjoBVd7djGYXGEbPa2l2vFs-MhVOzQNd25Np8yQ66BkaoqnDx2d-1zlZyFB4x6m93drSbVr7YTr9qYeqkodU0kDleYvNdRO4ViuEe5xefGQI8vdk76AsFl7hEnOx5kdXgwgotZfqaoHOF_WURXf',
-    alt: 'Young adults collaborating in a modern computer lab',
+    src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80&auto=format&fit=crop',
+    alt: 'Developer working on code at a laptop',
     offset: true,
   },
 ];

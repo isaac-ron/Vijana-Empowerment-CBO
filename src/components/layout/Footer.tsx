@@ -9,11 +9,11 @@ export default function Footer() {
         <div className="space-y-6">
           <Link href="/" className="inline-flex items-center" aria-label="Vijana Empowerment Initiative home">
             <Image
-              src="/logo-lockup.svg"
+              src="/logo-wordmark.svg"
               alt="Vijana Empowerment Initiative"
-              width={300}
-              height={96}
-              className="h-24 w-auto object-contain"
+              width={280}
+              height={90}
+              className="h-16 w-auto object-contain"
             />
           </Link>
           <p className="text-body-md text-on-surface-variant leading-relaxed">

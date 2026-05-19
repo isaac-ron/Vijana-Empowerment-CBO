@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 
 export const metadata: Metadata = {
   title: 'Vijana Digital Hub | Computer Training Program',
@@ -28,7 +29,7 @@ export default function DigitalHubPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/get-involved#apply"
+                href="#enroll"
                 className="bg-primary text-on-primary px-8 py-4 rounded-xl text-label-md shadow-lg shadow-primary/20 hover:shadow-xl transition-all flex items-center gap-2 group"
               >
                 Enroll Now
@@ -247,38 +248,31 @@ export default function DigitalHubPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 bg-cream-to-white relative overflow-hidden">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="bg-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
-            <div className="relative z-10 max-w-3xl mx-auto space-y-10">
-              <h2 className="text-display-lg-mobile md:text-display-lg text-white">
-                Ready to start your digital journey?
-              </h2>
-              <p className="text-body-lg text-primary-fixed leading-relaxed">
-                Applications for the next cohort are open. Secure your spot and join the next
-                generation of digitally fluent youth in Bomet County.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                <Link
-                  href="/get-involved#apply"
-                  className="bg-white text-primary px-10 py-5 rounded-full text-label-md shadow-xl hover:bg-surface-container-low transition-all"
-                >
-                  Apply Today
-                </Link>
-                <Link
-                  href="/get-involved"
-                  className="bg-transparent text-white border-2 border-white/30 px-10 py-5 rounded-full text-label-md hover:bg-white/10 transition-all"
-                >
-                  Speak to an Advisor
-                </Link>
-              </div>
-            </div>
-            <div className="absolute -top-24 -left-24 w-96 h-96 bg-secondary/30 rounded-full blur-[100px]" />
-            <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-container/80 rounded-full blur-[100px]" />
-          </div>
-        </div>
-      </section>
+      <ProgramEnrollmentForm
+        formTitle="Vijana Digital Hub Enrollment"
+        sectionHeading="Ready to start your digital journey?"
+        sectionLead="Applications for the next cohort are open. Secure your spot and join the next generation of digitally fluent youth in Bomet County."
+        steps={[
+          {
+            title: 'Submit Application',
+            body: 'Complete the inquiry below. Bring your National ID when you visit the Sotik hub.',
+          },
+          {
+            title: 'Aptitude Chat',
+            body: 'A short conversation to help us place you on the right track — from total beginner to intermediate.',
+          },
+          {
+            title: 'Start Learning',
+            body: 'Begin on Day 1 with foundational digital literacy, then specialize.',
+          },
+        ]}
+        interestOptions={[
+          'Digital Literacy & MS Office',
+          'Data Entry & Virtual Assistance',
+          'Graphic Design & Digital Marketing',
+          'Web Development',
+        ]}
+      />
     </main>
   );
 }

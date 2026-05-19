@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 
 export const metadata: Metadata = {
   title: 'Vijana Fashion Forge | Fashion & Design Program',
@@ -40,7 +41,7 @@ export default function FashionForgePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/get-involved#apply"
+                href="#enroll"
                 className="bg-primary text-on-primary px-8 py-4 rounded-xl text-label-md shadow-lg hover:shadow-xl transition-all"
               >
                 Enroll in the Forge
@@ -237,32 +238,31 @@ export default function FashionForgePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-32 bg-surface-container-low text-center relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
-        <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
-          <h2 className="text-display-lg-mobile md:text-display-lg text-primary mb-6">Ready to shape the future?</h2>
-          <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
-            Apply for our next intake. Limited subsidized slots are available for school leavers,
-            women, teenage mothers, orphans, and persons with disabilities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              href="/get-involved#apply"
-              className="bg-primary text-on-primary px-10 py-5 rounded-full text-label-md shadow-xl hover:scale-105 transition-transform"
-            >
-              Start Your Application
-            </Link>
-            <Link
-              href="/get-involved"
-              className="border-2 border-primary text-primary px-10 py-5 rounded-full text-label-md hover:bg-surface-container-highest transition-all"
-            >
-              Talk to Our Team
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ProgramEnrollmentForm
+        formTitle="Vijana Fashion Forge Enrollment"
+        sectionHeading="Ready to shape the future?"
+        sectionLead="Apply for our next intake. Limited subsidized slots reserved for school leavers, women, teenage mothers, orphans, and persons with disabilities."
+        steps={[
+          {
+            title: 'Submit Application',
+            body: 'Complete the inquiry form or visit our Sotik hub with your National ID and a sample of your work (optional).',
+          },
+          {
+            title: 'Portfolio Review',
+            body: 'Bring or describe a garment, sketch, or craft you have made. No prior experience required.',
+          },
+          {
+            title: 'Begin Training',
+            body: 'Start sewing, drafting, and designing alongside experienced tailors and mentors.',
+          },
+        ]}
+        interestOptions={[
+          'Tailoring & Garment Making',
+          'Pattern Making & Drafting',
+          'Sustainable Fashion & Textiles',
+          'Fashion Illustration & Branding',
+        ]}
+      />
     </main>
   );
 }

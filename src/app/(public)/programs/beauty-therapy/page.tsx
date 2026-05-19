@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 
 export const metadata: Metadata = {
   title: 'Glow with Vijana | Beauty Therapy Program',
@@ -38,7 +39,7 @@ export default function BeautyTherapyPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/get-involved#apply"
+                href="#enroll"
                 className="px-8 py-4 bg-primary text-white rounded-xl text-label-md shadow-lg shadow-primary/20 hover:shadow-xl transition-all flex items-center gap-2"
               >
                 Enroll Now
@@ -275,28 +276,31 @@ export default function BeautyTherapyPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div className="bg-primary-container rounded-[2rem] p-8 md:p-20 text-center relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-display-lg-mobile md:text-headline-md text-white mb-6">Start Your Glow Journey</h2>
-            <p className="text-body-lg text-white/80 mb-10">
-              Applications are open for our next intake. Limited subsidized slots are reserved
-              for the most vulnerable youth in our community.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/get-involved#apply"
-                className="bg-white text-primary px-10 py-4 rounded-xl text-label-md hover:bg-surface-container-low transition-all shadow-lg"
-              >
-                Start My Application
-              </Link>
-            </div>
-          </div>
-          <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary rounded-full blur-[80px] opacity-20" />
-          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-tertiary rounded-full blur-[80px] opacity-20" />
-        </div>
-      </section>
+      <ProgramEnrollmentForm
+        formTitle="Glow with Vijana Enrollment"
+        sectionHeading="Start Your Glow Journey"
+        sectionLead="Applications are open for our next intake. Limited subsidized slots are reserved for the most vulnerable youth in our community."
+        steps={[
+          {
+            title: 'Submit Application',
+            body: 'Fill in the inquiry below or visit our Sotik hub with your National ID.',
+          },
+          {
+            title: 'Skills Conversation',
+            body: 'A friendly chat with our beauty-therapy instructors about your interests, goals, and any prior experience.',
+          },
+          {
+            title: 'Begin Training',
+            body: 'Step into the salon and start practicing on real techniques with locally sourced products.',
+          },
+        ]}
+        interestOptions={[
+          'Hairdressing & Styling',
+          'Nail Technology',
+          'Makeup Artistry',
+          'Spa & Salon Management',
+        ]}
+      />
     </main>
   );
 }
