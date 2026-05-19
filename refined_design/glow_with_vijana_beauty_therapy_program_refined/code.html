@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glow with Vijana | Beauty Therapy Program</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#ffffff", "surface-variant": "#e4e2de", "on-tertiary-container": "#fcb812", "on-surface-variant": "#59413e", "on-surface": "#1b1c1a", "on-error-container": "#93000a", "inverse-surface": "#30312e", "secondary-container": "#fd7c28", surface: "#fbf9f5", "on-background": "#1b1c1a", "surface-container-highest": "#e4e2de", secondary: "#9d4400", "on-secondary-fixed-variant": "#783200", "on-primary-fixed-variant": "#8c1712", "primary-container": "#9b221b", "on-primary": "#ffffff", "inverse-primary": "#ffb4aa", "tertiary-container": "#6b4b00", "tertiary-fixed-dim": "#ffbb1e", "on-secondary-container": "#5f2600", "on-tertiary-fixed-variant": "#5e4200", "inverse-on-surface": "#f2f0ed", primary: "#790506", "surface-dim": "#dbdad6", "secondary-fixed": "#ffdbca", "on-tertiary-fixed": "#271900", "on-secondary": "#ffffff", error: "#ba1a1a", "surface-container": "#efeeea", "outline-variant": "#e0bfba", "surface-tint": "#ae3027", outline: "#8d716d", "on-error": "#ffffff", "on-primary-fixed": "#410001", "surface-container-high": "#eae8e4", background: "#fbf9f5", "error-container": "#ffdad6", "secondary-fixed-dim": "#ffb690", "surface-bright": "#fbf9f5", "primary-fixed-dim": "#ffb4aa", tertiary: "#4d3600", "on-secondary-fixed": "#331100", "on-primary-container": "#ffb0a6", "tertiary-fixed": "#ffdea7", "on-tertiary": "#ffffff", "surface-container-low": "#f5f3ef", "primary-fixed": "#ffdad5"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"container-max": "1280px", "margin-mobile": "16px", unit: "4px", "margin-desktop": "40px", gutter: "24px"}, fontFamily: {"body-md": ["Inter"], "headline-sm": ["Manrope"], "label-md": ["Inter"], "headline-md": ["Manrope"], "display-lg-mobile": ["Manrope"], "body-lg": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Manrope"], headline: ["Manrope"], display: ["Manrope"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "700"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "headline-md": ["32px", {lineHeight: "40px", fontWeight: "700"}], "display-lg-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-cream-to-white {
+            background: linear-gradient(to bottom, #f9fbe7, #ffffff);
+        }
+    </style>
+</head>
+<body class="bg-cream-to-white font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/90 backdrop-blur-md dark:bg-surface-dim/90 docked full-width top-0 sticky z-50 shadow-sm border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-extrabold text-primary tracking-tight">
+                Vijana Empowerment
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary border-b-2 border-secondary font-bold pb-1 font-label-md text-label-md" href="#">Programs</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">About</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Impact</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Get Involved</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="hidden md:block px-6 py-2 rounded-full border-2 border-secondary text-secondary font-label-md text-label-md hover:bg-secondary hover:text-white transition-all">Apply</button>
+<button class="px-6 py-2 rounded-full bg-primary text-white font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Donate Now</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center relative z-10">
+<div class="z-10">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm mb-6 uppercase tracking-widest shadow-sm">Vocational Excellence</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">Glow with Vijana: Beauty Therapy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+                        A comprehensive training program designed to empower young Kenyan creatives with technical mastery in hairdressing, nail technology, and spa management, fueled by local innovation.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-4 bg-primary text-white rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:shadow-xl transition-all flex items-center gap-2">
+                            Enroll Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-white border-2 border-outline-variant text-on-surface rounded-xl font-label-md text-label-md hover:bg-surface-container-low transition-all">
+                            Download Curriculum
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Beauty Therapy Student" class="w-full h-full object-cover" data-alt="A professional close-up shot of a young Kenyan woman with a vibrant, modern hairstyle being meticulously finished by a stylist. The lighting is warm and cinematic, highlighting the intricate textures of the hair and the focused expression of the professional. The background features a contemporary, high-end salon setting with soft bokeh, reflecting an atmosphere of empowerment and professional excellence in beauty therapy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFZmbogh8N6qqp_2LC1V5ScL3n7iphtQfvDggLa41puRuFFayGmimVlGa78JANeMLr0BbAaf_WnT6U-GDGnuXJ-fWa1SGel58rMrKyAwEslx-2pg36CSfO84lwEwGNgBHAFzzysQTiQ0RfOn8O-K0MHGexRIrnzbguL3TWupheAxV52FTFe8z55REyllTJ34mFd-B0iknGUHCqWjK3LL3zSAyPq9-IeHC92aohKhDRuRiHrIpGmaUP_Y0yqTtlJHiDTCZYHQRybhIy"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<p class="font-headline-sm text-primary">100%</p>
+<p class="font-label-sm text-on-surface-variant">Internship Placement</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Specialized Tracks -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Master Your Craft</h2>
+<p class="text-on-surface-variant font-body-md max-w-2xl mx-auto">From the art of styling to the science of management, our specialized tracks prepare you for every facet of the beauty industry.</p>
+</div>
+<div class="space-y-32">
+<!-- Hair Dressing & Styling -->
+<div class="grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 relative">
+<div class="aspect-[4/5] md:aspect-auto md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+<img alt="Hair Styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A split composition showing a close-up of skilled hands performing intricate braiding on dark hair alongside a collection of professional styling tools. The image is bright and airy with a professional laboratory aesthetic, emphasizing the precision and technical skill involved in hair styling. The color palette uses warm earth tones and crisp whites, maintaining a tactile and welcoming brand feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHd3Y3R3xa1i7A8l82UBXh2GTBEsJC8-NrXCaKzxpjr05UTs6RVgBxcoI_2lP9ZT29KH_DpuPUQ2BOoS8T3d4I2wlII2vG6ZwBZ30u744kDxWmEpdsOnFieVo3LxXa_F6b4ay9nPfiwH_SrGJprbmawpv0OZYjo_J6NcKChdguJkOQhgVGZh_GJ8jxYCVGnqSErlKJ24DrN4BX3HVQnRiJwTUCc-alQAB2ai7dr0d3W5Wa_XkHERW6hraOcHc63ywFDWbioFv1PIEb"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-fixed/50 rounded-full blur-[60px] -z-10"></div>
+</div>
+<div class="md:col-span-5 md:col-start-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6 text-secondary border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-[28px]">content_cut</span>
+<span class="font-label-md uppercase tracking-wider">Hair Dressing &amp; Styling</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Advanced techniques in braiding, chemical treatments, and precision cutting. Focus on diverse hair textures and cultural styling excellence.</p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+<span class="font-body-md text-on-surface pt-1">Braiding &amp; Weaving</span>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+<span class="font-body-md text-on-surface pt-1">Color Theory &amp; Application</span>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+<span class="font-body-md text-on-surface pt-1">Modern Bridal Styling</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Digital Hub & Beauty (Split Text Section) -->
+<div class="grid md:grid-cols-2 gap-16 md:gap-24 relative py-12">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container/50 to-transparent -z-10 rounded-[3rem] -mx-8 md:-mx-12"></div>
+<!-- Nail Tech -->
+<div class="flex flex-col">
+<div class="w-20 h-20 bg-tertiary-fixed text-on-tertiary-fixed rounded-[2rem] flex items-center justify-center mb-8 shadow-sm">
+<span class="material-symbols-outlined text-[40px]">draw</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">Nail Technology</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Manicures, pedicures, and nail art. Learn to use safe, high-quality products to create stunning visual statements.</p>
+<div class="flex gap-4">
+<div class="bg-surface-variant px-4 py-2 rounded-full font-label-sm text-on-surface-variant">New: UV Gel Art</div>
+<div class="bg-surface-variant px-4 py-2 rounded-full font-label-sm text-on-surface-variant">Acrylic Mastery</div>
+</div>
+</div>
+<!-- Spa Management -->
+<div class="flex flex-col">
+<div class="w-20 h-20 bg-primary-fixed text-on-primary-fixed rounded-[2rem] flex items-center justify-center mb-8 shadow-sm">
+<span class="material-symbols-outlined text-[40px]">spa</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">Spa Management</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Operational excellence for wellness centers. Includes customer service, hygiene standards, and luxury service protocols.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-md hover:opacity-80 transition-opacity group mt-auto" href="#">
+<span class="border-b border-current pb-1">Learn More</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Salon Business -->
+<div class="grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 flex flex-col justify-center order-2 md:order-1">
+<div class="flex items-center gap-3 mb-6 text-secondary border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-[28px]">storefront</span>
+<span class="font-label-md uppercase tracking-wider">Business</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">Salon Management Training</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">We don't just train artists; we build entrepreneurs. Learn the fundamentals of running a successful beauty business in the Kenyan market.</p>
+<div class="flex gap-8 items-center mb-10">
+<div>
+<span class="block font-label-sm text-secondary mb-1">Inventory</span>
+<span class="font-label-md text-on-surface font-bold uppercase tracking-wide">Local Sourcing</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div>
+<span class="block font-label-sm text-secondary mb-1">Finance</span>
+<span class="font-label-md text-on-surface font-bold uppercase tracking-wide">Profitability</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 relative order-1 md:order-2">
+<div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+<img alt="Salon Management" class="absolute inset-0 w-full h-full object-cover" data-alt="An interior view of a modern, eco-conscious beauty salon in Nairobi, featuring minimalist wooden shelving filled with locally sourced beauty products. The space is flooded with natural light, showcasing a clean and professional environment. A young manager is seen in the background reviewing a tablet, illustrating the intersection of beauty and business management in a vibrant, professional setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hDuWcvsZJeqwIgTZjIsgB2EkfkgZaqN2-mdeOB5WT016x0VwyFapra8e-BTbagbfTBU8HK_wV6sgCrD5ka2Z2-ijuC4PAIjCBrxwHyQI-3BNstihuiMjRLgOx_I51qX8WLs-3nRBA3X6tbCiEWqamaXj6UabeiPMPWQme2w5FzU6wgCQm2GBS1MVvLb9zUhCe5nbUYzdbEBO8nkVAJfUKXIndFQT8G_T520He6oUbR9pAUy1G_h92V8nSOk2oUmLzjT0jVRWhotT"/>
+</div>
+<div class="absolute -top-8 -right-8 w-64 h-64 bg-primary-fixed/30 rounded-full blur-[80px] -z-10"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Product Focus -->
+<section class="py-24 bg-inverse-surface text-white relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="flex flex-col md:flex-row items-center justify-between gap-16">
+<div class="space-y-8 flex-1 pl-6 border-l-4 border-secondary">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg">The Local Advantage</h2>
+<p class="text-lg opacity-80 font-body-lg max-w-xl leading-relaxed">
+                            We prioritize training with Kenyan-made organic products. Our curriculum focuses on sustainable sourcing, supporting local farmers who provide shea butter, coconut oil, and essential oils.
+                        </p>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">eco</span>
+</div>
+<div>
+<h4 class="font-label-md text-white">Ethical Sourcing</h4>
+<p class="text-sm opacity-70">100% commitment to cruelty-free and locally sourced ingredients.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">support</span>
+</div>
+<div>
+<h4 class="font-label-md text-white">Community Growth</h4>
+<p class="text-sm opacity-70">Empowering local artisans through direct supply chains.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 flex-1">
+<img alt="Organic Local Products" class="rounded-2xl shadow-lg w-full object-cover aspect-square" data-alt="Close up of organic beauty products like shea butter and oils in glass jars on a rustic table with soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS4v3rkL2CcdXdQi9X00r7tsTTGizIV3tGyQFZlBP442SuCsjicv7mQlbAezWM7-sO8NLFRs0RoVPQrYDruIL_Fvif8JfLx4n6erALandE25z-oOQpXep5a0radZIcAswMisFa3fO9R-mvYSXh-K9iUg2RkNdM2W74pIzQTzYsD1fZKiGkPQzn3kdenx7CpcLz6z0a4htITmTqvwYxM7fYuQveNkvNS20nXYWHqhf12vb-O3MT483Z1-0wH7fGm-0BYrT5D5o_ryGx"/>
+<img alt="Local Oil Treatment" class="rounded-2xl shadow-lg mt-8 w-full object-cover aspect-square" data-alt="A professional aesthetician applying locally sourced facial oil with gold leaf accents to a client's face." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf0pBn6WXstGUOXWYDJssQHBuxfrswTppDpqqrX6wbxDQUqILZsgJkJLt6jYuo9EnPO3P4WvSx9uAQCnDjf-BdjHVwCrmZPpmKVQ3sUDjjftHh2m49PjfaLjQcaevNgIlgomL3b-47Cezw8K_IGBgYbQZGrJQQX060aOWlhsj1F1MNn2UWZRxnRu6YBT3Yhdvmf8eflmdnq4Pw1a1YB_53bzMGiliBxfe-rX5HYEtgC3eZtlrGgoo62qjf3ajronYLk2NoaOeKONJh"/>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-10 rounded-full blur-[100px] -mr-48 -mt-48 pointer-events-none"></div>
+</section>
+<!-- Internship Partnerships -->
+<section class="py-24 bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">From Training to Industry</h2>
+<p class="text-on-surface-variant font-body-md">We partner with over 40 leading salons across Nairobi, Mombasa, and Kisumu to provide our students with hands-on experience and immediate employment pathways.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center opacity-60">
+<div class="flex flex-col items-center gap-3">
+<div class="w-full h-16 rounded-lg flex items-center justify-center p-4">
+<span class="font-bold text-on-surface-variant uppercase tracking-widest text-sm text-center">Luxe Styles Nairobi</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-full h-16 rounded-lg flex items-center justify-center p-4">
+<span class="font-bold text-on-surface-variant uppercase tracking-widest text-sm text-center">Savannah Spa</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-full h-16 rounded-lg flex items-center justify-center p-4">
+<span class="font-bold text-on-surface-variant uppercase tracking-widest text-sm text-center">Coastal Glow</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-full h-16 rounded-lg flex items-center justify-center p-4">
+<span class="font-bold text-on-surface-variant uppercase tracking-widest text-sm text-center">The Barber Studio</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-full h-16 rounded-lg flex items-center justify-center p-4">
+<span class="font-bold text-on-surface-variant uppercase tracking-widest text-sm text-center">Urban Chic Salon</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container rounded-[2rem] p-8 md:p-20 text-center relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg-mobile md:font-headline-md text-white mb-6">Start Your Glow Journey Today</h2>
+<p class="font-body-lg text-body-lg text-white/80 mb-10">Applications are open for our September intake. Limited slots available for subsidized training positions.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-10 py-4 rounded-xl font-label-md text-label-md hover:bg-surface-container-low transition-all shadow-lg">Start My Application</button>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-secondary rounded-full blur-[80px] opacity-20"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-tertiary rounded-full blur-[80px] opacity-20"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant/30">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-black text-primary dark:text-inverse-primary mb-4">
+                Vijana Initiative
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant mb-6">Empowering youth for a resilient future through skills, innovation, and partnership.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all text-on-surface-variant" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all text-on-surface-variant" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all text-on-surface-variant" href="#"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Programs</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Glow with Vijana</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Tech Empowerment</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Agri-Business</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Creative Arts</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Impact Report</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Donate</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all font-body-md" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary mb-6 uppercase tracking-wider">Newsletter</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Stay updated on our impact and new intakes.</p>
+<div class="flex gap-2">
+<input class="bg-surface border border-outline-variant rounded-lg px-4 py-2 w-full text-on-surface focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg hover:opacity-90 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-4 mt-12 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Vijana Empowerment Initiative. Empowering youth for a resilient future.</p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

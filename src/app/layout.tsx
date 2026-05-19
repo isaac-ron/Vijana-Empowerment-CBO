@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/manrope";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-  title: "Vijana Empowerment CBO | Empowering Kenyan Youth",
-  description: "Equipping marginalized youth in Sotik with market-ready vocational skills and entrepreneurial spirit.",
+  title: "Vijana Empowerment Initiative | Empowering Kenyan Youth",
+  description:
+    "A community-based organization in Sotik Sub-County, Bomet County, providing vocational training, mentorship, and entrepreneurship support to vulnerable youth.",
 };
 
 export default function RootLayout({
@@ -25,17 +15,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${manrope.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col bg-surface text-on-surface">
-        <Navbar />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-      </body>
+    <html lang="en" className="h-full antialiased">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        />
+      </head>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }
