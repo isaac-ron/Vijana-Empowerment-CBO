@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vijana Empowerment | Digital Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {surface: "#fbf9f5", "primary-container": "#9b221b", "on-error": "#ffffff", "on-secondary-fixed": "#331100", "tertiary-container": "#6b4b00", "primary-fixed": "#ffdad5", "surface-variant": "#e4e2de", "on-secondary-fixed-variant": "#783200", "inverse-on-surface": "#f2f0ed", "on-tertiary-container": "#fcb812", "error-container": "#ffdad6", outline: "#8d716d", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#ffb4aa", "on-tertiary-fixed": "#271900", "on-surface-variant": "#59413e", "on-primary-fixed": "#410001", "inverse-surface": "#30312e", "surface-bright": "#fbf9f5", "secondary-container": "#fd7c28", "on-tertiary-fixed-variant": "#5e4200", "on-tertiary": "#ffffff", secondary: "#9d4400", "on-surface": "#1b1c1a", primary: "#790506", error: "#ba1a1a", "surface-container-high": "#eae8e4", "outline-variant": "#e0bfba", "surface-tint": "#ae3027", "surface-dim": "#dbdad6", "inverse-primary": "#ffb4aa", "surface-container-low": "#f5f3ef", "on-secondary-container": "#5f2600", "on-primary": "#ffffff", "on-error-container": "#93000a", "tertiary-fixed": "#ffdea7", "on-background": "#1b1c1a", "tertiary-fixed-dim": "#ffbb1e", "on-secondary": "#ffffff", "secondary-fixed": "#ffdbca", "on-primary-fixed-variant": "#8c1712", "on-primary-container": "#ffb0a6", "surface-container": "#efeeea", tertiary: "#4d3600", "secondary-fixed-dim": "#ffb690", background: "#fbf9f5", "surface-container-highest": "#e4e2de"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"margin-mobile": "16px", "container-max": "1280px", "margin-desktop": "40px", unit: "4px", gutter: "24px"}, fontFamily: {"body-md": ["Inter"], "label-md": ["Inter"], "display-lg-mobile": ["Manrope"], "display-lg": ["Manrope"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Manrope"], "headline-sm": ["Manrope"], headline: ["Manrope"], display: ["Manrope"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "display-lg-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500"}], "headline-md": ["32px", {lineHeight: "40px", fontWeight: "700"}], "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "700"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-border {
+            border-bottom: 2px solid #9d4400;
+        }
+        .bg-cream-to-white {
+            background: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-extrabold text-primary tracking-tight">
+                Vijana Empowerment
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-primary border-b-2 border-secondary font-bold pb-1 text-label-md font-label-md" href="#">Programs</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">About</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Impact</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Get Involved</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block px-6 py-2 rounded-full border-2 border-secondary text-secondary font-label-md text-label-md hover:bg-secondary hover:text-white transition-all">Apply</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md shadow-sm active:scale-95 transition-transform duration-150">Donate Now</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[600px] flex items-center overflow-hidden bg-cream-to-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20 relative z-10">
+<div class="max-w-xl text-on-surface">
+<span class="inline-block bg-secondary-fixed text-on-secondary-fixed px-4 py-1 rounded-full text-label-sm font-label-sm mb-6 uppercase tracking-wider">Flagship Training Program</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-primary">Vijana Digital Hub</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Accelerating youth careers in the digital economy. From basic literacy to high-level technical expertise, we empower you to thrive in the global gig market.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-md text-label-md shadow-lg shadow-primary/20 hover:shadow-xl transition-all flex items-center gap-2 group">
+                            Enroll Now
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="bg-surface-container-highest text-primary border border-outline-variant/30 px-8 py-4 rounded-xl font-label-md text-label-md hover:bg-white transition-all">Download Brochure</button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/3] md:aspect-auto md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A group of diverse Kenyan youth in a bright, modern technology hub working on high-end laptops. The room is filled with natural light, featuring warm wooden textures and pops of vibrant orange and primary red accents. The atmosphere is energetic, collaborative, and professional, capturing the spirit of a high-tech learning environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdhFqJVxGQBV3Fsl0BjVdZvuZusZTk48e_BHS5X9WJI-uaGMRM4BRhgSFKzDZ6DDiElVhCM9G8iYVsfppoWyjZex3Q9VBZSKYO7e4HhhvqqCWSuw17gWZDwtAYyQu5T_K8L6mm3vjgkEn35mGgDXo7NvWlTFo84L4CVR2Io_ZmeV3E-dfVy0bLD2BXiubI7xpbnAHtbWZmr2eLFEkXF44YqHik0G-uKU4YQGz8Z_QPLZwYLXAjRbHYYw2mfAFV_SCgMIWCbKji7Wu0"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-fixed/50 rounded-full blur-[60px] -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Core Modules: Editorial Style -->
+<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20 max-w-2xl mx-auto space-y-4">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Comprehensive Digital Curriculum</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Our industry-vetted courses are designed to take you from beginner to professional in just 16 weeks.</p>
+</div>
+<div class="space-y-32">
+<!-- Graphic Design -->
+<div class="grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 flex flex-col justify-center order-2 md:order-1">
+<div class="flex items-center gap-3 mb-6 text-secondary border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-[28px]">palette</span>
+<span class="font-label-md uppercase tracking-wider">Design</span>
+</div>
+<h3 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">Graphic Design &amp; Visual Identity</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Master Adobe Creative Suite and Figma. Learn brand storytelling through color theory, typography, and professional composition.</p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+<span class="font-body-md text-on-surface pt-1">Logo Design &amp; Branding</span>
+</li>
+<li class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+</div>
+<span class="font-body-md text-on-surface pt-1">UI/UX Fundamentals</span>
+</li>
+</ul>
+<a class="inline-flex items-center gap-2 text-primary font-label-md hover:text-secondary transition-colors group" href="#">
+<span class="border-b border-current pb-1">View Design Curriculum</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-6 md:col-start-7 relative order-1 md:order-2">
+<div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border border-outline-variant/20 relative z-10">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A professional graphic designer's workspace featuring a dual-monitor setup showing colorful brand identity projects and UI wireframes. The desk is clean, minimalist, with a high-end drawing tablet and stylus. Soft, cinematic lighting highlights the creative process in a modern studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP6yXqnSQ83DdySVQF8uxu2hcec6JdU2orF0ZavgdO5lfgvhxQ8dnBapRv7HB5ReD84Eu4QeRTMto3-5MEJFHtWjL0zWMKx2G3azzQhoiOpcbN8E_blAk3KGCkecI5aaoFAuIUQ_e9auuwe51KtQvKKBu4pu6btVj67j_wC_zEoQadPaXXeBIensw-Qa5yGV5O1TWd0Xq9e51sX_yEus3gexFLlvt0vk8Z7hF4JcBt_M3yDOf0wpSnlIxefU13G3js8ApirkHk7_Hd"/>
+</div>
+</div>
+</div>
+<!-- MS Office & Full Stack (Split) -->
+<div class="w-full h-px bg-outline-variant/20 max-w-4xl mx-auto"></div>
+<div class="grid md:grid-cols-2 gap-16 md:gap-24 relative py-12">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-low/50 to-transparent -z-10 rounded-[3rem] -mx-8 md:-mx-12"></div>
+<!-- MS Office -->
+<div class="flex flex-col">
+<div class="w-20 h-20 bg-primary-fixed text-on-primary-fixed rounded-[2rem] flex items-center justify-center mb-8 shadow-sm">
+<span class="material-symbols-outlined text-[40px]">description</span>
+</div>
+<h3 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">MS Office Professional</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Advanced Excel, professional report writing, and dynamic presentations. The foundation for every corporate role.</p>
+<div class="mt-auto">
+<div class="w-full bg-surface-dim h-1.5 rounded-full mb-3">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Essential Skillset</span>
+</div>
+</div>
+<!-- Web Development -->
+<div class="flex flex-col">
+<div class="w-20 h-20 bg-tertiary-fixed text-on-tertiary-fixed rounded-[2rem] flex items-center justify-center mb-8 shadow-sm">
+<span class="material-symbols-outlined text-[40px]">code</span>
+</div>
+<h3 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">Full-Stack Development</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Build modern web applications using HTML5, CSS3, JavaScript, and React. Create digital solutions for local businesses.</p>
+<a class="inline-flex items-center gap-2 text-tertiary font-label-md hover:opacity-80 transition-opacity group mt-auto" href="#">
+<span class="border-b border-current pb-1">View Curriculum</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Digital Marketing -->
+<div class="w-full h-px bg-outline-variant/20 max-w-4xl mx-auto"></div>
+<div class="grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 relative">
+<div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border border-outline-variant/20 relative z-10">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A clean, vibrant digital marketing visualization with glowing analytical charts and social media icons projected on a sleek glass surface. The image uses a palette of primary reds and oranges against a professional navy background, symbolizing data-driven growth and global reach." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXmp1VOb3JznKcVK_JQ0--tliU1IrMEdJiZsWl_Qs0Hlsv841a3eAse89N7M0THKDm7ZdoCkzhPWoIdDnzVENYdVr6guUrg93lmEp_1ia5iLorKEEn1Ou1j_7HoVCPgzdLJpSBV6oGEtSqeOUm5lqzbXz2AoaQNU52bT2S8-xOfL2zIAe_F_ouYPco5PwPZJalRMsDFgWHmyIbt5EZFxzBf_lIt_BVbDO_N4rOurtcKGziFDSo3Lm4rxDZ9cA-SpH2lvbbgizoma74"/>
+</div>
+<div class="absolute -top-8 -left-8 w-48 h-48 bg-secondary-fixed/50 rounded-full blur-[60px] -z-10"></div>
+</div>
+<div class="md:col-span-5 md:col-start-8 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6 text-secondary border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-[28px]">ads_click</span>
+<span class="font-label-md uppercase tracking-wider">Marketing</span>
+</div>
+<h3 class="font-display-lg-mobile text-display-lg-mobile mb-6 text-on-background">Digital Marketing</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Master SEO, Social Media Management, and Content Strategy. Learn to drive measurable growth for any brand or business.</p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="inline-block px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-label-sm border border-outline-variant/30">Meta Certified</span>
+<span class="inline-block px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-sm text-label-sm border border-outline-variant/30">Google Analytics</span>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-md hover:text-secondary transition-colors group" href="#">
+<span class="border-b border-current pb-1">View Marketing Curriculum</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Career Paths Section -->
+<section class="bg-surface py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="font-headline-md text-headline-md text-primary">Unlocking Global Opportunities</h2>
+<div class="w-12 h-1 bg-secondary rounded-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">We don't just teach tools; we build careers. Our specialized tracks focus on high-demand remote work sectors.</p>
+<!-- Career Paths (Text-based, no heavy cards) -->
+<div class="space-y-12 pt-8">
+<div class="pl-6 border-l-2 border-secondary/30 relative">
+<span class="material-symbols-outlined text-secondary text-3xl mb-3 absolute -left-[18px] bg-surface top-0 pb-2">support_agent</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-3 mt-1">Virtual Assistant Hub</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Administrative support, executive scheduling, and customer management for international clients. Earn in foreign currency while working from home.</p>
+</div>
+<div class="pl-6 border-l-2 border-primary/30 relative">
+<span class="material-symbols-outlined text-primary text-3xl mb-3 absolute -left-[18px] bg-surface top-0 pb-2">work</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-3 mt-1">Gig Economy Mastery</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Profile optimization for Upwork, Fiverr, and Toptal. Learn the art of high-value bidding, client communication, and project management.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 relative lg:pl-12">
+<div class="relative">
+<div class="aspect-square rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 z-10 relative">
+<img class="w-full h-full object-cover" data-alt="A confident young Kenyan woman sitting at a modern desk with a laptop, wearing professional attire and a headset, engaging in a video call. She is smiling, representing the success of the Virtual Assistant program. The background is a blurred, stylish home office with warm accent lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8NHGTGFwTbRMGL-r3Rlx99kjNMmybm7nsP0qCtIGTX4rDLB028BlDFuup1MLuPl2uNyRAuvwfC49KD7PnTqdxMF-VxEbJVf80bMktBU4efy6C4pVoykmh2IDbxoTIvWXZeegIMm8s0TTq91kywllqY_tZp_WG0cdq55x2gHL4l1cork63aoxC2k_IwaJYWLXWPO40b_CWZwiEoUmxb-pj_u4VxB9XB6myrvmOkSPtZ42UL9C-80tVViNdVS282WPsfJ3Pu95KnxfH"/>
+</div>
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-fixed/30 rounded-full blur-[80px] -z-10"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Stats (Typographic) -->
+<section class="py-24 bg-cream-to-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x divide-outline-variant/20">
+<div class="space-y-4">
+<p class="font-display-lg text-[56px] leading-none font-black tracking-tighter text-primary">1,200+</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Graduates</p>
+</div>
+<div class="space-y-4">
+<p class="font-display-lg text-[56px] leading-none font-black tracking-tighter text-secondary">85%</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Employment Rate</p>
+</div>
+<div class="space-y-4">
+<p class="font-display-lg text-[56px] leading-none font-black tracking-tighter text-primary">$450k</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Gig Earnings</p>
+</div>
+<div class="space-y-4">
+<p class="font-display-lg text-[56px] leading-none font-black tracking-tighter text-secondary">12+</p>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Global Partners</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-cream-to-white relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="bg-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
+<div class="relative z-10 max-w-3xl mx-auto space-y-10">
+<h2 class="font-display-lg-mobile md:font-display-lg text-white">Ready to start your digital journey?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed leading-relaxed">Applications for the next cohort are now open. Secure your spot and join the next generation of Kenyan tech leaders.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+<button class="bg-white text-primary px-10 py-5 rounded-full font-label-md text-[18px] shadow-xl hover:bg-surface-container-low transition-all">Apply Today</button>
+<button class="bg-transparent text-white border-2 border-white/30 px-10 py-5 rounded-full font-label-md text-[18px] hover:bg-white/10 transition-all">Speak to an Advisor</button>
+</div>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary/30 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-container/80 rounded-full blur-[100px]"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-16 bg-surface border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+<div class="space-y-6 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-black text-primary">Vijana</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Empowering youth for a resilient future through technology and skills development.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white border border-outline-variant/30 flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface group-hover:text-white">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white border border-outline-variant/30 flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface group-hover:text-white">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white border border-outline-variant/30 flex items-center justify-center hover:bg-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-on-surface group-hover:text-white">mail</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Quick Links</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary hover:underline underline-offset-4 transition-colors" href="#">Programs</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary hover:underline underline-offset-4 transition-colors" href="#">Impact Report</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary hover:underline underline-offset-4 transition-colors" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Organization</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary hover:underline underline-offset-4 transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary hover:underline underline-offset-4 transition-colors" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary hover:underline underline-offset-4 transition-colors" href="#">Donate</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-wider">Contact</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span>Nairobi Innovation Hub,<br/>P.O Box 123-00100<br/>Kenya</span>
+</li>
+<li class="flex items-start gap-3">
+<span>info@vijana-empowerment.org</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Vijana Empowerment Initiative. Empowering youth for a resilient future.</p>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary hover:underline underline-offset-4" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

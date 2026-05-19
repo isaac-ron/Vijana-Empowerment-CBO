@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== Colors (from refined_design/DESIGN.md) ===== */
+  --color-surface: #fbf9f5;
+  --color-surface-dim: #dbdad6;
+  --color-surface-bright: #fbf9f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3ef;
+  --color-surface-container: #efeeea;
+  --color-surface-container-high: #eae8e4;
+  --color-surface-container-highest: #e4e2de;
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #59413e;
+  --color-inverse-surface: #30312e;
+  --color-inverse-on-surface: #f2f0ed;
+  --color-outline: #8d716d;
+  --color-outline-variant: #e0bfba;
+  --color-surface-tint: #ae3027;
+  --color-primary: #790506;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #9b221b;
+  --color-on-primary-container: #ffb0a6;
+  --color-inverse-primary: #ffb4aa;
+  --color-secondary: #9d4400;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fd7c28;
+  --color-on-secondary-container: #5f2600;
+  --color-tertiary: #4d3600;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #6b4b00;
+  --color-on-tertiary-container: #fcb812;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #ffdad5;
+  --color-primary-fixed-dim: #ffb4aa;
+  --color-on-primary-fixed: #410001;
+  --color-on-primary-fixed-variant: #8c1712;
+  --color-secondary-fixed: #ffdbca;
+  --color-secondary-fixed-dim: #ffb690;
+  --color-on-secondary-fixed: #331100;
+  --color-on-secondary-fixed-variant: #783200;
+  --color-tertiary-fixed: #ffdea7;
+  --color-tertiary-fixed-dim: #ffbb1e;
+  --color-on-tertiary-fixed: #271900;
+  --color-on-tertiary-fixed-variant: #5e4200;
+  --color-background: #fbf9f5;
+  --color-on-background: #1b1c1a;
+  --color-surface-variant: #e4e2de;
+
+  /* ===== Font families =====
+     Self-hosted via @fontsource-variable/inter & @fontsource-variable/manrope.
+     Variable family names ("Inter Variable" / "Manrope Variable") are first,
+     with the non-variable names kept as fallback. */
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display-lg: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display-lg-mobile: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-md: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-sm: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body-lg: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label-md: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label-sm: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Font sizes (typography scale) ===== */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 800;
+
+  --text-display-lg-mobile: 36px;
+  --text-display-lg-mobile--line-height: 44px;
+  --text-display-lg-mobile--letter-spacing: -0.02em;
+  --text-display-lg-mobile--font-weight: 800;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 40px;
+  --text-headline-md--font-weight: 700;
+
+  --text-headline-sm: 24px;
+  --text-headline-sm--line-height: 32px;
+  --text-headline-sm--font-weight: 700;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.01em;
+  --text-label-md--font-weight: 600;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.04em;
+  --text-label-sm--font-weight: 500;
+
+  /* ===== Radius ===== */
+  --radius-sm: 0.5rem;
+  --radius: 1rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /* ===== Spacing tokens ===== */
+  --spacing-unit: 4px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 40px;
+}
+
+/* ===== Custom utilities ===== */
+@utility impact-card-gradient {
+  background: linear-gradient(135deg, rgba(253, 124, 40, 0.1) 0%, rgba(121, 5, 6, 0.05) 100%);
+}
+
+@utility bg-page-gradient {
+  background: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
+}
+
+@utility bg-cream-to-white {
+  background: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%);
+}
+
+@utility bg-cream-gradient {
+  background: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
+}
+
+/* ===== Material Symbols base styling ===== */
+.material-symbols-outlined,
+.material-symbols-rounded {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* ===== Global styles ===== */
+html, body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-lowest": "#ffffff", "surface-variant": "#e4e2de", "on-tertiary-container": "#fcb812", "on-surface-variant": "#59413e", "on-surface": "#1b1c1a", "on-error-container": "#93000a", "inverse-surface": "#30312e", "secondary-container": "#fd7c28", surface: "#fbf9f5", "on-background": "#1b1c1a", "surface-container-highest": "#e4e2de", secondary: "#9d4400", "on-secondary-fixed-variant": "#783200", "on-primary-fixed-variant": "#8c1712", "primary-container": "#9b221b", "on-primary": "#ffffff", "inverse-primary": "#ffb4aa", "tertiary-container": "#6b4b00", "tertiary-fixed-dim": "#ffbb1e", "on-secondary-container": "#5f2600", "on-tertiary-fixed-variant": "#5e4200", "inverse-on-surface": "#f2f0ed", primary: "#790506", "surface-dim": "#dbdad6", "secondary-fixed": "#ffdbca", "on-tertiary-fixed": "#271900", "on-secondary": "#ffffff", error: "#ba1a1a", "surface-container": "#efeeea", "outline-variant": "#e0bfba", "surface-tint": "#ae3027", outline: "#8d716d", "on-error": "#ffffff", "on-primary-fixed": "#410001", "surface-container-high": "#eae8e4", background: "#fbf9f5", "error-container": "#ffdad6", "secondary-fixed-dim": "#ffb690", "surface-bright": "#fbf9f5", "primary-fixed-dim": "#ffb4aa", tertiary: "#4d3600", "on-secondary-fixed": "#331100", "on-primary-container": "#ffb0a6", "tertiary-fixed": "#ffdea7", "on-tertiary": "#ffffff", "surface-container-low": "#f5f3ef", "primary-fixed": "#ffdad5"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"container-max": "1280px", "margin-mobile": "16px", unit: "4px", "margin-desktop": "40px", gutter: "24px"}, fontFamily: {"body-md": ["Inter"], "headline-sm": ["Manrope"], "label-md": ["Inter"], "headline-md": ["Manrope"], "display-lg-mobile": ["Manrope"], "body-lg": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Manrope"], headline: ["Manrope"], display: ["Manrope"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "headline-sm": ["24px", {lineHeight: "32px", fontWeight: "700"}], "label-md": ["14px", {lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600"}], "headline-md": ["32px", {lineHeight: "40px", fontWeight: "700"}], "display-lg-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500"}], "display-lg": ["48px", {lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-cream-gradient {
+            background: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
+        }
+    </style>
+</head>
+<body class="bg-cream-gradient font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/90 backdrop-blur-md dark:bg-surface-dim/90 docked full-width top-0 sticky z-50 shadow-sm border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-extrabold text-primary dark:text-inverse-primary tracking-tight">
+                Vijana Empowerment
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Programs</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">About</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-secondary font-bold pb-1" href="#">Impact</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Get Involved</a>
+</div>
+<div class="flex gap-4">
+<button class="hidden md:block px-6 py-2 rounded-full border-2 border-secondary text-secondary font-label-md hover:bg-surface-container-low transition-all duration-200">Apply</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md hover:opacity-90 active:scale-95 transition-all">Donate Now</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A successful young Kenyan female graduate wearing a bright professional blazer, confidently working on a laptop in a modern sunlit office space. The lighting is warm and natural, highlighting her focused expression. The background is slightly blurred showing a vibrant workspace with hints of corporate professionalism and youth-driven energy, consistent with a high-end organizational brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1yI1Kyic6OCZWdg6Ue90kWey8VqaixmCveBPDRdypaGVul3NVHPGoESSMS5z7Q3RQj7TEizI7XBuvKFQy87TphpU1N8uzD0kBU_XprbukxLCFtbckCZMqAklOaRe6u_4lw_T87u9dXy41sIPmp2CzfuzDprYVTuE2S3I-DSoMDsnXsaaz2LYKWrjwlYHMn2w12Fe1RU0vp2KkX9gRKqmyYwAwxKP9oXV5e4GeBztfFpIPw1qPfrqnKJOFzQ3ltWLFXEkk7VJ3BUsv"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-on-primary">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg max-w-2xl mb-6">
+                    Real Stories, Real Transformation
+                </h1>
+<p class="font-body-lg text-body-lg max-w-xl mb-8 opacity-90">
+                    We believe in the power of potential. Through our programs, we've witnessed thousands of young people in Bomet and Sotik turn their dreams into thriving realities.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-headline-sm flex items-center gap-2 hover:scale-105 transition-transform" href="#success-stories">
+                        Explore Stories <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Impact Dashboard -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+</div>
+<h2 class="font-display-lg text-primary mb-2">1,200+</h2>
+<p class="font-headline-sm text-on-surface-variant">Graduates Trained</p>
+<p class="mt-4 text-on-surface-variant/80 font-body-md max-w-xs">Empowered with vocational and digital skills for the modern economy.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-fixed rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl">work</span>
+</div>
+<h2 class="font-display-lg text-secondary mb-2">85%</h2>
+<p class="font-headline-sm text-on-surface-variant">Employment Rate</p>
+<p class="mt-4 text-on-surface-variant/80 font-body-md max-w-xs">Our alumni successfully transitioned into formal jobs or self-employment within 6 months.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">payments</span>
+</div>
+<h2 class="font-display-lg text-tertiary mb-2">KES 15M+</h2>
+<p class="font-headline-sm text-on-surface-variant">Community Income</p>
+<p class="mt-4 text-on-surface-variant/80 font-body-md max-w-xs">Estimated annual revenue generated by our alumni-led businesses and salaries.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Story Carousel/Grid -->
+<section class="py-32 bg-surface-container-low" id="success-stories">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-20 text-center max-w-3xl mx-auto">
+<span class="text-primary font-label-md tracking-widest uppercase block mb-4">Faces of Change</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-6">Our Alumni Are Leading the Way</h2>
+<p class="text-body-lg text-on-surface-variant">From fashion design to digital innovation, our graduates are redefining what's possible for the youth of Bomet County.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-16">
+<!-- Sarah -->
+<div class="group flex flex-col gap-8">
+<div class="w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg border border-outline-variant/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A portrait of Sarah, a young Kenyan fashion entrepreneur, standing in her vibrant studio surrounded by colorful fabrics and a professional sewing machine. She is smiling warmly, wearing a custom-made traditional-modern fusion garment. The room is filled with soft natural light, conveying a sense of pride, craftsmanship, and local success." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHzb-21NWqki2NZmxYWkQ0nzew7c1nMAJwEgzrqMOfcSp4ISJ6OENul7Ig5sza_Qqa5IeO9yKqV5qrzVCOgiz-1s4jzOjzaOIo_3gi9xUqBdQ21LEe_xvLzGgEtXwvvykcwJupmnVhZ8pXdLSuz4UFte9Rjv8pZT-N8Lmve_7MRjt1G3-07v2T2y3B5UTFG2BFoDZ5Ubsgr98AMX6K5MzXGz22-Nkwp_LpSXVarQdKbEvUcu5Z97O76i8-HJZPRKJmsMT7Wdw3aQfx"/>
+</div>
+<div class="md:px-4">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-label-sm rounded-full w-fit mb-4">Fashion Entrepreneur</span>
+<h3 class="font-headline-md mb-4 text-on-surface">Sarah’s Stitch of Success</h3>
+<div class="bg-white/80 backdrop-blur p-6 rounded-2xl border border-outline-variant/20 mb-6 relative">
+<span class="material-symbols-outlined text-primary/20 text-5xl absolute -top-4 -left-2">format_quote</span>
+<p class="text-body-md text-on-surface-variant italic relative z-10">"Vijana Initiative didn't just give me a sewing machine; they gave me a business mind. Today I employ three other youth from my village."</p>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 group/link" href="#">
+                            Read full story <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- John -->
+<div class="group flex flex-col gap-8 md:mt-16">
+<div class="w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg border border-outline-variant/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="John, a young digital specialist in Kenya, sitting in a collaborative tech space with dual monitors showing code and analytics. He is pointing at a screen while mentor-ing a fellow student. The environment is modern and sleek, lit with cool blues and warm indoor lighting, capturing a sophisticated tech-savvy atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGXTX5uhRIP2a9jYQNtXfwRtiOuxS09Ol2Kp-G-CV9G29WyMfRkyrIxDrec3oP_PGljbVg-uFY-cNZPCV7irEn57LpiPFxOvNJuCZoGSxU0BKayD0wWrf_VI3GuTXBhWGwnXJqUJdedRGXPo2-MvEJPcm9WJU3awyBio3b1R6-loxqgOacRBfxZh_TZ5DKnuvpftA2KFwzO_YV5FK0zKFk4eldohGJT-jJ02g8u_ARNRgTZ9PY72RfkNtFxsUpc41WXHm_6-YAdxsn"/>
+</div>
+<div class="md:px-4">
+<span class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-label-sm rounded-full w-fit mb-4">Digital Specialist</span>
+<h3 class="font-headline-md mb-4 text-on-surface">John’s Digital Leap</h3>
+<div class="bg-white/80 backdrop-blur p-6 rounded-2xl border border-outline-variant/20 mb-6 relative">
+<span class="material-symbols-outlined text-primary/20 text-5xl absolute -top-4 -left-2">format_quote</span>
+<p class="text-body-md text-on-surface-variant italic relative z-10">"Transitioning from local farming to data analysis seemed impossible until I joined the program. I now work remotely for global clients."</p>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 group/link" href="#">
+                            Read full story <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Geographic Impact Map -->
+<section class="py-24 bg-white overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 space-y-6">
+<span class="text-secondary font-label-md tracking-widest uppercase block mb-2">Where We Work</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-6">Our Reach Across Bomet &amp; Sotik</h2>
+<div class="w-12 h-1 bg-secondary rounded-full mb-6"></div>
+<p class="text-body-lg text-on-surface-variant mb-12">We are deeply rooted in the community. Our reach extends across multiple sub-counties, bringing tailored vocational training to where it's needed most.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<h4 class="font-headline-sm text-primary mb-2">Sotik Town Center</h4>
+<p class="text-on-surface-variant">Main Training Hub and Digital Innovation Lab.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<h4 class="font-headline-sm text-primary mb-2">Bomet Central Hub</h4>
+<p class="text-on-surface-variant">Focusing on Agriculture &amp; Sustainable Farming Practices.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<h4 class="font-headline-sm text-primary mb-2">Rural Satellite Points</h4>
+<p class="text-on-surface-variant">Mobile training units reaching Chepalungu and Konoin.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 relative">
+<div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="A stylized, artistic map illustration of Bomet and Sotik counties in Kenya. The map features elegant topographic lines and is punctuated by bright red and orange glowing pins representing impact hubs. The style is modern corporate, using a palette of soft greys and the brand's signature primary red to highlight key areas of activity." data-location="Bomet County, Kenya" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVe3PuDSrk3C5pxEjqs4feJp6FijK-1ALjHzG7Ki9vr0I_dNyWxeFqXNG48N-R4URTM3l3abwKdAOlu7KW5V_b9hEO67hDtigZ2S1QpZ_EX2Yb2QVs-swLdkDdrs8z28fkauBLTruQcPSKCXxm5rVV-efw60XL4BkulckKM9zgz1ay2AS-1xgcFNr0oizORJ5ZFGK29ceERWd4SgsCigSBEtkxMb5KW-yIuy_3ILdNyL7yiYmkNEJdN2rfr2iBzZK4t97elTnri92T"/>
+<div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-outline-variant/20 flex justify-between items-center">
+<div>
+<p class="text-label-sm text-primary uppercase font-bold tracking-widest">Total Outreach</p>
+<h5 class="font-headline-sm text-on-surface">15 Communities Impacted</h5>
+</div>
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">map</span>
+</div>
+</div>
+</div>
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-fixed/50 rounded-full blur-[60px] -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Alumni Network section -->
+<section class="py-32 bg-primary text-on-primary overflow-hidden relative">
+<div class="absolute inset-0 opacity-10">
+<div class="grid grid-cols-6 h-full gap-4">
+<div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div><div class="border-r border-white"></div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10 rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover" data-alt="A group of young professional Kenyan alumni gathered in a circle during a community leadership workshop. They are engaged in an active discussion, laughing and taking notes. The setting is a brightly lit, modern community hall with brand banners in the background. The mood is collaborative and empowering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_5ffICIE003YpAaqFvQXS79jpFJahmd2pq65bdlboldTCTnHrCQdrcmr5Hj9m_R7sG74fBetdsJ171EHYgQX7I_ZOpJwwxWCxRrZXOkVyBnUU-XHI7JzqD7R28dvKNLyHVjXXk1_vhUiySauXnHvoFyEuEzWPJvqs880_6ju8pGNCNM5SpSRGypVT4qEP4ki1h2N6AIkWkNQQxbUQ4oXXyc9elIfsVX7iiVsAeA7MdUuMGWZJNq0cHj4k11QbhEn8B40r57hk58PO"/>
+</div>
+<div class="absolute -bottom-12 -right-12 w-64 h-64 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-primary">
+<img class="w-full h-full object-cover" data-alt="Close up of two Kenyan graduates shaking hands during an alumni networking event. They are dressed in business casual attire. The background shows a crowd of diverse young professionals networking in a warm, welcoming environment with soft bokeh lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEyAEAhPanIH5e15IBiBNzHzwcfvdFTduK4Dt8Vqbjor-tvD8b1WfMow70mGLg01E1-RcyULLh4lWHkCH_-oQHnDF2zbploX6f1fYyzzppiUOwnQ6sx02j_WAMjxI4z-QzI_fOPxHKojk58YMOCWhWXgqGH-Ouq_Latrd79Ik0RhDVdiGsGhGZqSIlui0qxjLjOxXK60R8bxNjuKtnUO4UjaX3BUSeEiOCXm9qhvX0qFDHOJTaU125qhogFh8FwdMc3FN9LH-szqih"/>
+</div>
+</div>
+<div class="order-1 lg:order-2 lg:pl-12">
+<h2 class="font-display-lg-mobile md:font-display-lg mb-8">The Alumni Circle: Leadership Beyond Graduation</h2>
+<p class="font-body-lg mb-12 opacity-90 leading-relaxed">
+                            Graduation is just the beginning. Our Alumni Network provides lifelong mentorship, access to micro-grants, and a platform for graduates to become community leaders. 40% of our alumni now serve as volunteer mentors for the next generation.
+                        </p>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed">diversity_3</span>
+</div>
+<div>
+<h4 class="font-headline-sm mb-2">Peer Support</h4>
+<p class="font-body-md opacity-80">Weekly mastermind groups for business owners.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-headline-sm mb-2">Giving Back</h4>
+<p class="font-body-md opacity-80">Alumni-led community service projects.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 bg-white text-primary px-8 py-4 rounded-full font-headline-sm hover:bg-surface-container-lowest transition-colors shadow-lg hover:-translate-y-1">Join the Network</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-32 relative overflow-hidden bg-cream-to-white">
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center relative z-10">
+<div class="max-w-3xl mx-auto space-y-8">
+<h2 class="font-display-lg-mobile md:font-display-lg text-primary">Support Our Next Cohort</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        Your contribution directly funds the training of youth who are ready to transform their lives and their communities. Together, we can scale this impact.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline-sm shadow-lg hover:bg-primary-container transition-all active:scale-95" href="#">Donate KES 5,000</a>
+<a class="bg-transparent border-2 border-primary text-primary px-10 py-4 rounded-full font-headline-sm hover:bg-surface-container-highest transition-all" href="#">Partner With Us</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant w-full px-margin-mobile md:px-margin-desktop py-12 grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-black text-primary dark:text-inverse-primary mb-6">
+                Vijana Empowerment
+            </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant mb-6">
+                Empowering youth for a resilient future through skills, mentorship, and opportunity in rural Kenya.
+            </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-headline-sm text-primary mb-6">Programs</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Vocational Training</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Digital Literacy</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Entrepreneurship</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Agri-Business</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-primary mb-6">Organization</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Impact Report</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors hover:underline decoration-secondary underline-offset-4" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-primary mb-6">Newsletter</h4>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant mb-4">Stay updated on our journey and impact.</p>
+<div class="flex gap-2">
+<input class="bg-surface rounded-xl border-none ring-1 ring-outline-variant focus:ring-2 focus:ring-secondary w-full p-3 font-body-md" placeholder="Your email" type="email"/>
+<button class="bg-secondary text-on-secondary px-4 py-2 rounded-xl transition-transform active:scale-95"><span class="material-symbols-outlined">send</span></button>
+</div>
+<p class="mt-12 font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant">© 2024 Vijana Empowerment Initiative. Empowering youth for a resilient future.</p>
+</div>
+</footer>
+</body></html>
