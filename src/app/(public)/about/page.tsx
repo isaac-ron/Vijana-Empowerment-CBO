@@ -10,28 +10,28 @@ export const metadata: Metadata = {
 
 const TEAM = [
   {
-    name: 'Dr. Kiprono Langat',
+    name: 'John Doe',
     role: 'Executive Director',
     aspect: 'aspect-[4/5]',
     offset: '',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBgKUaRehonS9q-Lr5ZPrNVwxvpXOfxGo8lNWiTkjbqLgLaVnIXrR1HEfHEfUwX-pLL1RrXpB3ZGDDBB7-SXk5kTjzuQNfnPCBuhF3yeIlOZciSlXqmaluM6jBV-c2Gu-vzbnh41452pORlXFLyMzPgysWTAUEFC_8ATKLP2Q4B7o_z0ONlIlhz4QjEmlgpCtlx-cYCcpzihecOeT6wa9pm4V0oahg_Xu6zClj4u0eDI6yWSHf-9-w9QB9cCWDxTOQ9WrbcBGNVL8fD',
   },
   {
-    name: 'Faith Chepkemoi',
+    name: 'Jane Smith',
     role: 'Programs Coordinator',
     aspect: 'aspect-square',
     offset: 'pt-0 lg:pt-12',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBeqdurTX5hq5O7oJdiwNduikJ3h4AWoYAyzUrvPVrhFvbtHZs4rIw3oRmR9_55dH_evM3ApCgKpV5AWfek5MDOrjZ7hUOhx-5Xt-0xyM32hsA_-uxVulSirf814ahecDuE3ceVfHuijWLnUJN-nQBy_vrMXKiETUvFjyrV3mIB70kd0j0VoFDWHN5uPFJvF7oiZO7pscZjbT62pX4qHk1gsT2UXqbUuW3rFLqnhY0b7ltShoU43yBI1STHUWF_EzPaW_3EQ2No502o',
   },
   {
-    name: 'Robert Koech',
+    name: 'John Smith',
     role: 'Community Liaison',
     aspect: 'aspect-[4/5]',
     offset: '',
     src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3TqBNoDZPL_6wt-cmTv9z2ey0-GuCyUCWEI2sHfrEFk1zTA9HO7nnFmT5Me2QxEf0Vy7vkP5p4Fh8bfF4cFM9KCQtNNcbmF_jM0t-ZR9ztrfTnIQajWy50ZsEH4n4mgIa5lgXp6t4ySFdRYIrTDAtSp9MtClvPWkNMzo5sTUPMUyguyjn-95LVYA1u4mHQBDE8L6qBpNhcPlVbzLhW1szPyT87o4HSKlhQulAhjNSrYDGkpBqtoJ7-QRfC4X7OM6VYa_j9XiG95JK',
   },
   {
-    name: 'Sarah Chebet',
+    name: 'Jane Doe',
     role: 'Finance & Operations',
     aspect: 'aspect-square',
     offset: 'pt-0 lg:pt-12',
