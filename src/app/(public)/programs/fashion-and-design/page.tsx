@@ -37,7 +37,7 @@ export default function FashionForgePage() {
             <p className="text-body-lg text-on-surface-variant mb-10 leading-relaxed">
               A hands-on vocational program that turns creative energy into a thriving fashion
               career. From the first stitch to the final brand identity, we equip the next
-              generation of Kenyan designers with practical, market-ready skills.
+              generation of Kenyan fashion designers with practical, market-ready skills.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link

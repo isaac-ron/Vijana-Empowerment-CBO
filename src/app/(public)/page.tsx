@@ -56,7 +56,7 @@ export default function HomePage() {
             </h1>
             <p className="text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
               Vijana Empowerment Initiative equips young people in Sotik Sub-County, Bomet County
-              with market-ready skills, mentorship, and entrepreneurship support so they become
+              with market-ready skills, mentorship, and entrepreneurship support so that they become
               job creators, not job seekers.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
