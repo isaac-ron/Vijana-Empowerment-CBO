@@ -117,7 +117,7 @@ export default function HomePage() {
               </p>
               <p className="text-body-md text-on-surface-variant leading-relaxed">
                 Registered as a CBO with the Department of Social Services, we partner with local
-                businesses, faith-based groups, and government agencies to deliver hands-on
+                businesses, faith-based groups, like <b>Bethesda House of Grace Ministries, UK</b>, and government agencies to deliver hands-on
                 training, mentorship, and entrepreneurship support tailored to the local market.
               </p>
             </div>
@@ -149,6 +149,54 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partnerships */}
+      <section className="py-24 bg-white border-t border-outline-variant/20">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-4">
+            <p className="text-label-md uppercase tracking-widest text-secondary">Partnerships</p>
+            <h2 className="text-headline-md text-primary">Stronger Together</h2>
+            <p className="text-body-md text-on-surface-variant">
+              Our work in Sotik is amplified by partners who share our commitment to youth
+              empowerment.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto bg-cream-to-white border border-outline-variant/30 rounded-[2rem] p-8 md:p-12 shadow-sm flex flex-col md:flex-row items-center gap-8">
+            <div className="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+              <span
+                className="material-symbols-outlined text-primary text-[40px]"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                handshake
+              </span>
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-label-sm uppercase tracking-widest text-secondary mb-2">
+                Founding Partner
+              </p>
+              <h3 className="text-headline-sm text-primary mb-3">
+                Bethesda House of Grace Ministries, UK
+              </h3>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                We are proud to partner with Bethesda House of Grace Ministries, UK in advancing
+                vocational training, mentorship, and entrepreneurship support for vulnerable youth
+                in Sotik Sub-County.
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/get-involved#partnership"
+              className="inline-flex items-center gap-2 text-primary text-label-md uppercase tracking-widest hover:text-secondary transition-colors group"
+            >
+              <span className="border-b border-current pb-1">Become a Partner</span>
+              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+                arrow_forward
+              </span>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
 - [Vijana CBO project overview](project_vijana_overview.md) — mission, 4 programs, Sotik/Bomet target area, budget, outcomes
 - [Design system "Unity & Growth"](design_system_unity_growth.md) — colors, Manrope+Inter, 8px rhythm, pill shapes
 - [Refined design HTML exports](reference_refined_design.md) — Stitch-exported HTML in refined_design/ mapped to routes
+- [Grace Schools project](project_grace_schools.md) — second client, school site rebuild starting 2026-05-19, HostPinnacle hosting
