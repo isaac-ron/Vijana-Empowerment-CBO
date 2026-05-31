@@ -152,6 +152,7 @@ export default function HomePage() {
       </section>
 
       {/* Partnerships */}
+      {/*
       <section className="py-24 bg-white border-t border-outline-variant/20">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-4">
@@ -171,7 +172,7 @@ export default function HomePage() {
                 handshake
               </span>
             </div>
-            {/*}
+          
             <div className="flex-1 text-center md:text-left">
               <p className="text-label-sm uppercase tracking-widest text-secondary mb-2">
                 Founding Partner
@@ -184,7 +185,7 @@ export default function HomePage() {
                 vocational training, mentorship, and entrepreneurship support for vulnerable youth
                 in Sotik Sub-County.
               </p>
-            </div> */}
+            </div> 
           </div>
           <div className="text-center mt-10">
             <Link
@@ -199,6 +200,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Program quick links */}
       <section className="py-32 bg-cream-to-white">
