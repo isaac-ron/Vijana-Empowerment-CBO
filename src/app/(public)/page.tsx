@@ -116,9 +116,7 @@ export default function HomePage() {
                 disabilities, and school leavers from low-income households.
               </p>
               <p className="text-body-md text-on-surface-variant leading-relaxed">
-                Registered as a CBO with the Department of Social Services, we partner with local
-                businesses, faith-based groups, like <b>Bethesda House of Grace Ministries, UK</b>, and government agencies to deliver hands-on
-                training, mentorship, and entrepreneurship support tailored to the local market.
+                Registered as a CBO with the Department of Social Services, our organization works in partnership with international agencies, local businesses, faith based groups including Bethesda House of Grace Ministries, UK, and government agencies to deliver hands on training, mentorship and entrepreneurship support, tailored to the local market.
               </p>
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-12 lg:pl-12">
@@ -173,6 +171,7 @@ export default function HomePage() {
                 handshake
               </span>
             </div>
+            {/*}
             <div className="flex-1 text-center md:text-left">
               <p className="text-label-sm uppercase tracking-widest text-secondary mb-2">
                 Founding Partner
@@ -185,7 +184,7 @@ export default function HomePage() {
                 vocational training, mentorship, and entrepreneurship support for vulnerable youth
                 in Sotik Sub-County.
               </p>
-            </div>
+            </div> */}
           </div>
           <div className="text-center mt-10">
             <Link
