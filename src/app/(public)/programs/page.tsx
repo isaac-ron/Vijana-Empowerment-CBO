@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { IMG, uns } from '@/lib/images';
 
 export const metadata: Metadata = {
   title: 'Training Programs | Vijana Empowerment Initiative',
@@ -8,220 +9,148 @@ export const metadata: Metadata = {
     'Vocational training programs in fashion, beauty therapy, driving & mechanics, and computer skills — designed for youth in Sotik Sub-County, Bomet County.',
 };
 
+const TRACKS = [
+  {
+    href: '/programs/fashion-and-design',
+    idx: '01',
+    tag: 'Fashion & Textiles',
+    title: 'Vijana Fashion Forge',
+    body: 'Master tailoring, garment making, and pattern making with a focus on sustainable fashion, illustration, branding, and entrepreneurship, plus internships with local designers and fashion houses.',
+    img: IMG.sewing,
+    alt: 'A young woman sewing a garment in a workshop',
+    points: [
+      'Tailoring, garment making & textile knowledge',
+      'Fashion illustration, branding & entrepreneurship',
+      'Internships with local designers and fashion houses',
+    ],
+  },
+  {
+    href: '/programs/computer-training',
+    idx: '02',
+    tag: 'ICT',
+    title: 'Vijana Digital Hub',
+    body: 'From digital literacy and MS Office to data entry, graphic design, web development, and digital marketing, equipping youth for local employment and the global gig economy.',
+    img: IMG.duoTech,
+    alt: 'Two young people working at a computer',
+    points: [
+      'Computer literacy, data entry & MS Office',
+      'Web development & graphic design',
+      'Digital marketing for online income',
+    ],
+  },
+  {
+    href: '/programs/beauty-therapy',
+    idx: '03',
+    tag: 'Cosmetology',
+    title: 'Glow with Vijana',
+    body: 'Hairdressing, styling, nail tech, makeup, and spa management, with an emphasis on locally-sourced products, salon management, and customer service that keeps clients coming back.',
+    img: IMG.salon,
+    alt: 'A stylist working with a client at a salon',
+    points: [
+      'Hairdressing, nail tech & makeup',
+      'Salon management & customer service',
+      'Locally-sourced product mastery',
+    ],
+  },
+  {
+    href: '/programs/driving-mechanics',
+    idx: '04',
+    tag: 'Driving & Mechanics',
+    title: 'Vijana Wheels',
+    body: 'Practical driving certification, traffic rules, road safety, and basic mechanics. We partner with driving schools, garages, and transport companies for hands-on placement.',
+    img: IMG.engine,
+    alt: 'A mechanic inspecting an engine',
+    points: [
+      'NTSA-aligned driving & road safety',
+      'Vehicle maintenance & basic mechanics',
+      'Placement with garages and transport firms',
+    ],
+  },
+];
+
+const ADVANTAGE = [
+  { icon: 'handyman', title: 'Startup Toolkits', body: 'Graduates receive the essential tools of their trade to start earning immediately.' },
+  { icon: 'psychology', title: 'Life Skills', body: 'Financial literacy, communication, time management, and branding in every track.' },
+  { icon: 'workspace_premium', title: 'Industry Placements', body: 'Internships and job-placement partnerships with local businesses across every program.' },
+  { icon: 'diversity_3', title: 'Mentorship', body: 'One-on-one sessions with established professionals in your specific field of study.' },
+];
+
 export default function ProgramsPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="max-w-3xl">
-            <span className="inline-block bg-secondary-fixed text-on-secondary-fixed px-4 py-1 rounded-full text-label-sm mb-6 uppercase tracking-widest">
-              Skill up for the future
-            </span>
-            <h1 className="text-display-lg-mobile md:text-display-lg text-on-background mb-6">
-              Our Vocational Training Tracks
+      <section className="border-b-2 border-black">
+        <div className="bv-wrap py-16 md:py-24 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
+          <div className="bv-reveal">
+            <span className="bv-kicker">Skill up for the future</span>
+            <h1 className="font-display font-extrabold text-[clamp(2.6rem,6.5vw,5rem)] leading-[0.92] tracking-[-0.04em] mt-4 text-[#120d0b]">
+              Four vocational tracks the market is hiring for.
             </h1>
-            <p className="text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+            <p className="text-on-surface-variant text-body-lg mt-6 max-w-[52ch] leading-relaxed">
               We bridge the gap between unemployment and opportunity through hands-on technical
-              training, industry mentorship, and sustainable business incubation for the youth of
-              Sotik and beyond.
+              training, industry mentorship, and business incubation for the youth of Sotik and the
+              wider Bomet County.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="#tracks"
-                className="bg-primary text-on-primary px-8 py-4 rounded-xl text-label-md shadow-lg shadow-primary/20 hover:shadow-xl transition-all"
-              >
-                Explore All Tracks
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Link href="#tracks" className="bv-btn bv-btn-red">
+                Explore all tracks <span className="arr" aria-hidden>→</span>
               </Link>
-              <Link
-                href="/get-involved#donate-form"
-                className="bg-white border-2 border-outline-variant text-on-surface px-8 py-4 rounded-xl text-label-md hover:bg-surface-container-low transition-all"
-              >
-                Support the Programs
+              <Link href="/get-involved#donate-form" className="bv-btn bv-btn-out">
+                Support the programs
               </Link>
             </div>
           </div>
-        </div>
-        <div className="absolute top-0 right-0 w-1/3 h-full hidden lg:block opacity-20">
-          <div className="w-full h-full bg-[radial-gradient(circle_at_center,var(--color-secondary-container)_0%,transparent_70%)] opacity-30" />
+          <div className="bv-reveal relative aspect-[4/5] bv-border-3 bv-shadow-red overflow-hidden">
+            <Image src={uns(IMG.portrait, 900)} alt="A young Kenyan woman in vibrant print" fill sizes="(max-width:1024px) 100vw, 500px" className="object-cover object-[60%_20%]" priority />
+          </div>
         </div>
       </section>
 
-      {/* Editorial program layout */}
-      <section
-        id="tracks"
-        className="py-12 md:py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
-      >
-        <div className="space-y-32">
-          {/* Fashion Forge */}
-          <div className="grid md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-6 relative">
-              <div className="aspect-[4/5] md:aspect-auto md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfkaMFXDItMxXWSX81gB78J03cA6ihA6U2hZa7YWBjHvE4DXTGKH5Ww4VxQ0n-h9rhX7zvtRXKWMVfHJsmQSjrn3xGI3pjbOAil9AycQqq-K2dU87jzq46PpxvVK7S7-WV_o0XKCnT_xnQ4S0iBGKfP52tRSl7ZcaoS9cJLsAV0tr028UkWiMhOs2LQTz1ZsQx0G4J-AsYj2KnxODeAfxcHIT8GvrqX9COKKjtmJeTr4wVkFDDLNPACz1hUUa1g_3IndHPbWabIXPb"
-                  alt="Young Kenyan woman sewing a vibrant garment in a sunlit studio"
-                  width={800}
-                  height={1000}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-fixed/50 rounded-full blur-[60px] -z-10" />
+      {/* Tracks */}
+      <section id="tracks" className="bv-wrap py-16 md:py-28 space-y-20 md:space-y-28">
+        {TRACKS.map((t, i) => (
+          <div key={t.href} className={'grid md:grid-cols-2 gap-10 md:gap-16 items-center ' + (i % 2 ? 'md:[direction:rtl]' : '')}>
+            <div className="bv-reveal relative aspect-[4/3] bv-border-3 overflow-hidden [direction:ltr]" style={{ boxShadow: i % 2 ? '-12px 12px 0 0 #9a1e14' : '12px 12px 0 0 #9a1e14' }}>
+              <Image src={uns(t.img, 1000)} alt={t.alt} fill sizes="(max-width:768px) 100vw, 620px" className="object-cover" />
+              <span className="absolute top-0 left-0 bg-[#120d0b] text-white font-display font-extrabold text-lg px-3.5 py-2 leading-none">{t.idx}</span>
             </div>
-            <div className="md:col-span-5 md:col-start-8 flex flex-col justify-center">
-              <div className="flex items-center gap-3 mb-6 text-secondary border-b border-outline-variant/30 pb-4">
-                <span className="material-symbols-outlined text-[28px]">apparel</span>
-                <span className="text-label-md uppercase tracking-wider">Fashion &amp; Design</span>
-              </div>
-              <h2 className="text-display-lg-mobile mb-6 text-on-background">Vijana Fashion Forge</h2>
-              <p className="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
-                Master tailoring, garment making, and pattern making with a focus on sustainable
-                fashion. Includes fashion illustration, branding, entrepreneurship, and
-                internships with local designers or fashion houses.
-              </p>
-              <ul className="space-y-4 mb-10">
-                {[
-                  'Tailoring, garment making & textile knowledge',
-                  'Fashion illustration, branding & entrepreneurship',
-                  'Internships with local designers and fashion houses',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 mt-1">
-                      <span className="material-symbols-outlined text-secondary text-[18px]">check</span>
-                    </div>
-                    <span className="text-body-md text-on-surface pt-1">{item}</span>
+            <div className="bv-reveal [direction:ltr]">
+              <span className="bv-kicker">{t.tag}</span>
+              <h2 className="font-display font-extrabold text-[clamp(2rem,4vw,3rem)] leading-none tracking-[-0.03em] mt-4 mb-5 text-[#120d0b]">
+                {t.title}
+              </h2>
+              <p className="text-on-surface-variant text-body-lg leading-relaxed mb-7 max-w-[50ch]">{t.body}</p>
+              <ul className="space-y-3 mb-8">
+                {t.points.map((p) => (
+                  <li key={p} className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-[#9a1e14] text-[20px] mt-0.5">arrow_right_alt</span>
+                    <span className="text-on-surface">{p}</span>
                   </li>
                 ))}
               </ul>
-              <Link
-                className="inline-flex items-center gap-2 text-primary text-label-md hover:text-secondary transition-colors group"
-                href="/programs/fashion-and-design"
-              >
-                <span className="border-b border-current pb-1">Explore Fashion Forge</span>
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              <Link href={t.href} className="bv-btn bv-btn-black">
+                Explore {t.title.replace('Vijana ', '')} <span className="arr" aria-hidden>→</span>
               </Link>
             </div>
           </div>
-
-          <div className="w-full h-px bg-outline-variant/20 max-w-3xl mx-auto" />
-
-          {/* Digital Hub & Beauty (Split) */}
-          <div className="grid md:grid-cols-2 gap-16 md:gap-24 relative py-12">
-            <div className="absolute inset-0 bg-gradient-to-b from-surface-container-low/50 to-transparent -z-10 rounded-[3rem] -mx-8 md:-mx-12" />
-            <div className="flex flex-col">
-              <div className="w-20 h-20 bg-tertiary-fixed text-on-tertiary-fixed rounded-[2rem] flex items-center justify-center mb-8 shadow-sm">
-                <span className="material-symbols-outlined text-[40px]">devices</span>
-              </div>
-              <h2 className="text-display-lg-mobile mb-6 text-on-background">Vijana Digital Hub</h2>
-              <p className="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
-                From MS Office and digital literacy to data entry, graphic design, web
-                development, and digital marketing — equipping youth for both local employment
-                and the global gig economy.
-              </p>
-              <Link
-                className="inline-flex items-center gap-2 text-tertiary text-label-md hover:opacity-80 transition-opacity group mt-auto"
-                href="/programs/computer-training"
-              >
-                <span className="border-b border-current pb-1">Explore Digital Hub</span>
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </Link>
-            </div>
-            <div className="flex flex-col">
-              <div className="w-20 h-20 bg-primary-fixed text-on-primary-fixed rounded-[2rem] flex items-center justify-center mb-8 shadow-sm">
-                <span className="material-symbols-outlined text-[40px]">face_5</span>
-              </div>
-              <h2 className="text-display-lg-mobile mb-6 text-on-background">Glow with Vijana</h2>
-              <p className="text-body-lg text-on-surface-variant mb-8 leading-relaxed">
-                Hairdressing, styling, nail tech, makeup, and spa management with an emphasis on
-                local products, salon management, and customer service.
-              </p>
-              <div className="bg-white/80 backdrop-blur p-6 rounded-2xl border border-outline-variant/20 mb-8 relative">
-                <span className="material-symbols-outlined text-primary/20 text-5xl absolute -top-4 -left-2">format_quote</span>
-                <p className="text-body-md text-on-surface-variant italic relative z-10">
-                  &ldquo;I now run my own mobile salon thanks to the startup kit.&rdquo; &mdash; Sarah M., Glow graduate
-                </p>
-              </div>
-              <Link
-                className="inline-flex items-center gap-2 text-primary text-label-md hover:opacity-80 transition-opacity group mt-auto"
-                href="/programs/beauty-therapy"
-              >
-                <span className="border-b border-current pb-1">Explore Glow with Vijana</span>
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="w-full h-px bg-outline-variant/20 max-w-3xl mx-auto" />
-
-          {/* Wheels */}
-          <div className="grid md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-5 flex flex-col justify-center order-2 md:order-1">
-              <div className="flex items-center gap-3 mb-6 text-secondary border-b border-outline-variant/30 pb-4">
-                <span className="material-symbols-outlined text-[28px]">directions_car</span>
-                <span className="text-label-md uppercase tracking-wider">Transport &amp; Maintenance</span>
-              </div>
-              <h2 className="text-display-lg-mobile mb-6 text-on-background">Vijana Wheels</h2>
-              <p className="text-body-lg text-on-surface-variant mb-10 leading-relaxed">
-                Practical driving certification, traffic rules, road safety, and basic mechanics.
-                We partner with driving schools, garages, and transport companies for placement.
-              </p>
-              <div className="flex gap-8 items-center mb-10">
-                <div>
-                  <span className="block text-display-lg text-secondary mb-1">85%</span>
-                  <span className="text-label-md text-on-surface-variant uppercase tracking-wide">Target Job Placement</span>
-                </div>
-                <div className="w-px h-12 bg-outline-variant/30" />
-                <div>
-                  <span className="block text-display-lg text-secondary mb-1">
-                    6<span className="text-headline-sm">mo.</span>
-                  </span>
-                  <span className="text-label-md text-on-surface-variant uppercase tracking-wide">Course Length</span>
-                </div>
-              </div>
-              <Link
-                className="inline-flex items-center gap-2 text-primary text-label-md hover:text-secondary transition-colors group"
-                href="/programs/driving-mechanics"
-              >
-                <span className="border-b border-current pb-1">Explore Vijana Wheels</span>
-                <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </Link>
-            </div>
-            <div className="md:col-span-6 md:col-start-7 relative order-1 md:order-2">
-              <div className="aspect-[4/3] md:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHtpqpPpn92i7HLpCx-SX3KMnsVTX3QK3EuMY0__8VX5KKZhZziyAotS6enItMQiC2ewVK2kdVxDuNj0BUbghbDSMczQEzpfbLXGMPQIlpMEhuUVIfxqGRe6KM08O02fE12DnXUJwtg_09NEwye-D3N4PyhnYNsOTDl43GlZ9EzVvuzx-x-s6DxT4EhuhUXc-zzZhuoIL934M6waryZk1FetW0tdg8ZvoFaK86yHXLReGnxG9myxnoiGy9Frz-NMZtlzXeoJ-QdT85"
-                  alt="Young adults learning engine maintenance in a training garage"
-                  width={800}
-                  height={1000}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -top-8 -right-8 w-64 h-64 bg-primary-fixed/30 rounded-full blur-[80px] -z-10" />
-            </div>
-          </div>
-        </div>
+        ))}
       </section>
 
       {/* The Vijana Advantage */}
-      <section className="bg-inverse-surface text-inverse-on-surface py-24">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-headline-md mb-4">The Vijana Advantage</h2>
-            <p className="text-body-md opacity-80">
-              Every student, regardless of their chosen track, receives the foundational support
-              needed to thrive in the real world.
-            </p>
+      <section className="bg-[#120d0b] text-[#fdf3e8] border-y-2 border-black">
+        <div className="bv-wrap py-16 md:py-28">
+          <div className="max-w-2xl mb-14 bv-reveal">
+            <span className="bv-kicker bv-kicker-light">Every track, the same backing</span>
+            <h2 className="font-display font-extrabold text-[clamp(2rem,4.4vw,3.2rem)] leading-none tracking-[-0.03em] mt-4 text-white">
+              The Vijana Advantage
+            </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: 'handyman', title: 'Startup Toolkits', body: 'Graduates receive the essential tools of their trade to start their business immediately.' },
-              { icon: 'psychology', title: 'Life Skills', body: 'Financial literacy, communication, time management, and product branding integrated into every track.' },
-              { icon: 'workspace_premium', title: 'Industry Placements', body: 'Internships and job-placement partnerships with local businesses across every program.' },
-              { icon: 'diversity_3', title: 'Mentorship', body: 'One-on-one sessions with established professionals in your specific field of study.' },
-            ].map((f) => (
-              <div key={f.title} className="p-6 border border-white/10 rounded-2xl hover:bg-white/5 transition-colors">
-                <span className="material-symbols-outlined text-secondary-fixed-dim text-[40px] mb-6">{f.icon}</span>
-                <h3 className="text-headline-sm mb-3">{f.title}</h3>
-                <p className="text-body-md opacity-70">{f.body}</p>
+          <div className="bv-grid bv-grid-dark">
+            {ADVANTAGE.map((f) => (
+              <div key={f.title} className="bv-reveal p-8 min-h-[220px] flex flex-col">
+                <span className="material-symbols-outlined text-[#fa7f2a] text-[40px] mb-5">{f.icon}</span>
+                <h3 className="font-display font-bold text-headline-sm mb-2 text-white">{f.title}</h3>
+                <p className="text-[#fdf3e8]/70">{f.body}</p>
               </div>
             ))}
           </div>
@@ -229,34 +158,25 @@ export default function ProgramsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div className="bg-primary-container rounded-[2rem] p-8 md:p-20 text-center relative overflow-hidden">
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="text-display-lg-mobile md:text-headline-md text-white mb-6">
-              Ready to transform your future?
-            </h2>
-            <p className="text-body-lg text-white/80 mb-10">
-              Applications for the next training cohort are open. Sponsored slots are available
-              for school leavers, women, teenage mothers, orphans, and persons with disabilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/get-involved#apply"
-                className="bg-white text-primary px-10 py-4 rounded-xl text-label-md hover:bg-surface-container-low transition-all text-center"
-              >
-                Apply Now
-              </Link>
-              <Link
-                href="/get-involved"
-                className="bg-transparent border-2 border-white/30 text-white px-10 py-4 rounded-xl text-label-md hover:bg-white/10 transition-all text-center"
-              >
-                Inquire for Next Cohort
-              </Link>
-            </div>
+      <section className="relative overflow-hidden bg-[#9a1e14] text-white">
+        <div className="bv-wrap py-16 md:py-24 text-center">
+          <h2 className="font-display font-extrabold text-[clamp(2.2rem,5.5vw,4rem)] leading-[0.95] tracking-[-0.04em] max-w-[18ch] mx-auto">
+            Ready to transform your future?
+          </h2>
+          <p className="mt-5 max-w-[52ch] mx-auto text-white/90 text-body-lg">
+            Applications for the next cohort are open. Sponsored slots are reserved for school
+            leavers, women, teenage mothers, orphans, and persons with disabilities.
+          </p>
+          <div className="mt-8 flex gap-3.5 justify-center flex-wrap">
+            <Link href="/get-involved#apply" className="bv-btn bv-btn-white">
+              Apply now <span className="arr" aria-hidden>→</span>
+            </Link>
+            <Link href="/get-involved" className="bv-btn bv-btn-line">
+              Inquire for next cohort
+            </Link>
           </div>
-          <div className="absolute -top-24 -left-24 w-64 h-64 bg-secondary rounded-full blur-[80px] opacity-20" />
-          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-tertiary rounded-full blur-[80px] opacity-20" />
         </div>
+        <span className="absolute inset-x-0 bottom-0 h-3.5 opacity-45 [background:repeating-linear-gradient(90deg,#120d0b_0_28px,transparent_28px_56px)]" aria-hidden />
       </section>
     </main>
   );

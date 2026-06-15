@@ -1,90 +1,103 @@
 @import "tailwindcss";
 
 @theme {
-  /* ===== Colors (from refined_design/DESIGN.md) ===== */
-  --color-surface: #fbf9f5;
-  --color-surface-dim: #dbdad6;
-  --color-surface-bright: #fbf9f5;
+  /* ===== Bold Voice palette (brand red + orange + warm black + cream) =====
+     Mapped onto the existing Material token names so every page inherits the
+     new palette. Contrast pairs (surface / on-surface, primary / on-primary)
+     are preserved. */
+  --color-surface: #fdf3e8;
+  --color-surface-dim: #f0e0cf;
+  --color-surface-bright: #fffaf3;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f5f3ef;
-  --color-surface-container: #efeeea;
-  --color-surface-container-high: #eae8e4;
-  --color-surface-container-highest: #e4e2de;
-  --color-on-surface: #1b1c1a;
-  --color-on-surface-variant: #59413e;
-  --color-inverse-surface: #30312e;
-  --color-inverse-on-surface: #f2f0ed;
-  --color-outline: #8d716d;
-  --color-outline-variant: #e0bfba;
-  --color-surface-tint: #ae3027;
-  --color-primary: #790506;
+  --color-surface-container-low: #f9ecdd;
+  --color-surface-container: #f5e6d4;
+  --color-surface-container-high: #f0ddc8;
+  --color-surface-container-highest: #ecd6bd;
+  --color-on-surface: #171110;
+  --color-on-surface-variant: #4a3a34;
+  --color-inverse-surface: #120d0b;
+  --color-inverse-on-surface: #fdf3e8;
+  --color-outline: #9c857b;
+  --color-outline-variant: #d8c4b2;
+  --color-surface-tint: #9a1e14;
+  --color-primary: #9a1e14;
   --color-on-primary: #ffffff;
-  --color-primary-container: #9b221b;
-  --color-on-primary-container: #ffb0a6;
-  --color-inverse-primary: #ffb4aa;
-  --color-secondary: #9d4400;
+  --color-primary-container: #5e0f0a;
+  --color-on-primary-container: #ffd9cf;
+  --color-inverse-primary: #ff8f84;
+  --color-secondary: #a83d08;
   --color-on-secondary: #ffffff;
-  --color-secondary-container: #fd7c28;
-  --color-on-secondary-container: #5f2600;
-  --color-tertiary: #4d3600;
+  --color-secondary-container: #fa7f2a;
+  --color-on-secondary-container: #2a1402;
+  --color-tertiary: #8a5a00;
   --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #6b4b00;
-  --color-on-tertiary-container: #fcb812;
+  --color-tertiary-container: #f6a72c;
+  --color-on-tertiary-container: #2a1c00;
   --color-error: #ba1a1a;
   --color-on-error: #ffffff;
   --color-error-container: #ffdad6;
   --color-on-error-container: #93000a;
-  --color-primary-fixed: #ffdad5;
-  --color-primary-fixed-dim: #ffb4aa;
-  --color-on-primary-fixed: #410001;
-  --color-on-primary-fixed-variant: #8c1712;
-  --color-secondary-fixed: #ffdbca;
-  --color-secondary-fixed-dim: #ffb690;
-  --color-on-secondary-fixed: #331100;
-  --color-on-secondary-fixed-variant: #783200;
-  --color-tertiary-fixed: #ffdea7;
-  --color-tertiary-fixed-dim: #ffbb1e;
-  --color-on-tertiary-fixed: #271900;
-  --color-on-tertiary-fixed-variant: #5e4200;
-  --color-background: #fbf9f5;
-  --color-on-background: #1b1c1a;
-  --color-surface-variant: #e4e2de;
+  --color-primary-fixed: #ffd9cf;
+  --color-primary-fixed-dim: #ff8f84;
+  --color-on-primary-fixed: #3a0805;
+  --color-on-primary-fixed-variant: #7a1410;
+  --color-secondary-fixed: #ffe2cc;
+  --color-secondary-fixed-dim: #ffba86;
+  --color-on-secondary-fixed: #2a1402;
+  --color-on-secondary-fixed-variant: #8a3a08;
+  --color-tertiary-fixed: #ffe3b0;
+  --color-tertiary-fixed-dim: #f6c45a;
+  --color-on-tertiary-fixed: #2a1c00;
+  --color-on-tertiary-fixed-variant: #6a4600;
+  --color-background: #fdf3e8;
+  --color-on-background: #171110;
+  --color-surface-variant: #ecd6bd;
 
-  /* ===== Font families =====
-     Self-hosted via @fontsource-variable/inter & @fontsource-variable/manrope.
-     Variable family names ("Inter Variable" / "Manrope Variable") are first,
-     with the non-variable names kept as fallback. */
-  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-headline: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-label: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display-lg: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-display-lg-mobile: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-headline-md: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-headline-sm: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-body-lg: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-body-md: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-label-md: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-label-sm: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Bold Voice named colors (used by the component kit + new pages) */
+  --color-bv-black: #120d0b;
+  --color-bv-red: #9a1e14;
+  --color-bv-red-deep: #5e0f0a;
+  --color-bv-red-deeper: #360a06;
+  --color-bv-orange: #fa7f2a;
+  --color-bv-amber: #f6a72c;
+  --color-bv-cream: #fdf3e8;
+  --color-bv-cream-2: #f7e7d4;
+  --color-bv-ink: #171110;
 
-  /* ===== Font sizes (typography scale) ===== */
-  --text-display-lg: 48px;
+  /* ===== Fonts: Bricolage Grotesque (display) + Schibsted Grotesk (body) ===== */
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-display-lg: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-display-lg-mobile: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-md: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-headline-sm: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-body-lg: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-label-md: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-label-sm: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Type scale ===== */
+  --text-display-lg: 56px;
   --text-display-lg--line-height: 56px;
-  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--letter-spacing: -0.04em;
   --text-display-lg--font-weight: 800;
 
-  --text-display-lg-mobile: 36px;
-  --text-display-lg-mobile--line-height: 44px;
-  --text-display-lg-mobile--letter-spacing: -0.02em;
+  --text-display-lg-mobile: 40px;
+  --text-display-lg-mobile--line-height: 42px;
+  --text-display-lg-mobile--letter-spacing: -0.035em;
   --text-display-lg-mobile--font-weight: 800;
 
-  --text-headline-md: 32px;
-  --text-headline-md--line-height: 40px;
-  --text-headline-md--font-weight: 700;
+  --text-headline-md: 34px;
+  --text-headline-md--line-height: 38px;
+  --text-headline-md--letter-spacing: -0.03em;
+  --text-headline-md--font-weight: 800;
 
   --text-headline-sm: 24px;
-  --text-headline-sm--line-height: 32px;
+  --text-headline-sm--line-height: 30px;
+  --text-headline-sm--letter-spacing: -0.02em;
   --text-headline-sm--font-weight: 700;
 
   --text-body-lg: 18px;
@@ -97,20 +110,20 @@
 
   --text-label-md: 14px;
   --text-label-md--line-height: 20px;
-  --text-label-md--letter-spacing: 0.01em;
-  --text-label-md--font-weight: 600;
+  --text-label-md--letter-spacing: 0.02em;
+  --text-label-md--font-weight: 700;
 
   --text-label-sm: 12px;
   --text-label-sm--line-height: 16px;
   --text-label-sm--letter-spacing: 0.04em;
-  --text-label-sm--font-weight: 500;
+  --text-label-sm--font-weight: 600;
 
-  /* ===== Radius ===== */
-  --radius-sm: 0.5rem;
-  --radius: 1rem;
-  --radius-md: 1.5rem;
-  --radius-lg: 2rem;
-  --radius-xl: 3rem;
+  /* ===== Radius: squared off (Bold Voice). Circles kept via -full ===== */
+  --radius-sm: 0px;
+  --radius: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
   --radius-full: 9999px;
 
   /* ===== Spacing tokens ===== */
@@ -119,23 +132,22 @@
   --spacing-gutter: 24px;
   --spacing-margin-mobile: 16px;
   --spacing-margin-desktop: 40px;
+
+  --ease-bv: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ===== Custom utilities ===== */
+/* ===== Legacy gradient utilities (kept; now warm cream) ===== */
 @utility impact-card-gradient {
-  background: linear-gradient(135deg, rgba(253, 124, 40, 0.1) 0%, rgba(121, 5, 6, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(250, 127, 42, 0.12) 0%, rgba(154, 30, 20, 0.06) 100%);
 }
-
 @utility bg-page-gradient {
-  background: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
+  background: #fdf3e8;
 }
-
 @utility bg-cream-to-white {
-  background: linear-gradient(135deg, #fdfbf7 0%, #ffffff 100%);
+  background: #fdf3e8;
 }
-
 @utility bg-cream-gradient {
-  background: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
+  background: #fdf3e8;
 }
 
 /* ===== Material Symbols base styling ===== */
@@ -158,17 +170,111 @@
   vertical-align: middle;
 }
 
-/* ===== Global styles ===== */
+/* ===== Global base ===== */
 html, body {
   background-color: var(--color-background);
   color: var(--color-on-surface);
   min-height: 100vh;
 }
+body { font-family: var(--font-sans); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); letter-spacing: -0.02em; }
+::selection { background: #9a1e14; color: #fdf3e8; }
 
-body {
-  font-family: var(--font-sans);
+/* =====================================================================
+   BOLD VOICE COMPONENT KIT
+   ===================================================================== */
+
+/* layout */
+.bv-wrap { max-width: 1300px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 56px); }
+
+/* buttons: square, wipe + hard offset shadow */
+.bv-btn {
+  --wipe: var(--color-bv-black); --wipe-text: #fff;
+  position: relative; isolation: isolate; overflow: hidden;
+  display: inline-flex; align-items: center; gap: 0.5em;
+  font-family: var(--font-display); font-weight: 700; font-size: 0.96rem;
+  padding: 0.9em 1.5em; border-radius: 0; border: 2px solid transparent; cursor: pointer;
+  text-transform: none; line-height: 1.1;
+  transition: color .35s var(--ease-bv), transform .35s var(--ease-bv), box-shadow .35s var(--ease-bv);
 }
+.bv-btn::before { content: ""; position: absolute; inset: 0; background: var(--wipe); transform: translateX(-101%); transition: transform .45s var(--ease-bv); z-index: -1; }
+.bv-btn:hover::before { transform: translateX(0); }
+.bv-btn:hover { color: var(--wipe-text); transform: translate(-2px, -2px); }
+.bv-btn .arr { transition: transform .35s var(--ease-bv); font-weight: 800; }
+.bv-btn:hover .arr { transform: translateX(4px); }
+.bv-btn-red { background: var(--color-bv-red); color: #fff; --wipe: var(--color-bv-black); --wipe-text: #fff; box-shadow: 6px 6px 0 0 var(--color-bv-black); }
+.bv-btn-red:hover { box-shadow: 2px 2px 0 0 var(--color-bv-black); }
+.bv-btn-black { background: var(--color-bv-black); color: #fff; --wipe: var(--color-bv-red); --wipe-text: #fff; }
+.bv-btn-orange { background: var(--color-bv-orange); color: var(--color-bv-black); --wipe: var(--color-bv-black); --wipe-text: var(--color-bv-orange); }
+.bv-btn-out { background: transparent; border-color: var(--color-bv-black); color: var(--color-bv-black); --wipe: var(--color-bv-black); --wipe-text: #fff; }
+.bv-btn-white { background: #fff; color: var(--color-bv-black); --wipe: var(--color-bv-black); --wipe-text: #fff; box-shadow: 6px 6px 0 0 var(--color-bv-black); }
+.bv-btn-white:hover { box-shadow: 2px 2px 0 0 var(--color-bv-black); }
+.bv-btn-line { background: transparent; border-color: #fff; color: #fff; --wipe: #fff; --wipe-text: var(--color-bv-red); }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+/* hard offset shadow helpers */
+.bv-shadow-red { box-shadow: 12px 12px 0 0 var(--color-bv-red); }
+.bv-shadow-black { box-shadow: 10px 10px 0 0 var(--color-bv-black); }
+.bv-border { border: 2px solid var(--color-bv-black); }
+.bv-border-3 { border: 3px solid var(--color-bv-black); }
+
+/* kicker + rule */
+.bv-kicker { font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-bv-red); display: inline-flex; align-items: center; gap: 0.7em; }
+.bv-kicker::before { content: ""; width: 28px; height: 3px; background: var(--color-bv-orange); }
+/* kicker variants for dark backgrounds */
+.bv-kicker-light { color: var(--color-bv-orange); }
+.bv-kicker-light::before { background: var(--color-bv-orange); }
+.bv-kicker-white { color: #fff; }
+.bv-kicker-white::before { background: #fff; }
+.bv-rule { width: 56px; height: 5px; background: var(--color-bv-orange); }
+
+/* marquee */
+.bv-ticker { overflow: hidden; border-block: 2px solid var(--color-bv-black); }
+.bv-ticker-track { display: flex; white-space: nowrap; width: max-content; }
+.bv-ticker-track.left { animation: bv-scrollL 26s linear infinite; }
+.bv-ticker-track.right { animation: bv-scrollR 30s linear infinite; }
+.bv-ticker:hover .bv-ticker-track { animation-play-state: paused; }
+.bv-ticker span { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.05rem, 2.3vw, 1.6rem); letter-spacing: -0.02em; padding: 13px 0; display: inline-flex; align-items: center; }
+.bv-ticker .sq { width: 10px; height: 10px; margin: 0 26px; transform: rotate(45deg); }
+@keyframes bv-scrollL { to { transform: translateX(-50%); } }
+@keyframes bv-scrollR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+/* oversized arrow */
+.bv-bigarr { font-family: var(--font-display); font-weight: 800; line-height: 0.7; transition: transform .45s var(--ease-bv); }
+
+/* program / image card hover */
+.bv-prog { position: relative; overflow: hidden; isolation: isolate; }
+.bv-prog img { transition: transform .7s var(--ease-bv); }
+.bv-prog:hover img { transform: scale(1.06); }
+.bv-prog:hover .bv-bigarr { transform: translate(6px, -6px); }
+
+/* shared-border grid (sharp, no gaps) */
+.bv-grid { display: grid; grid-template-columns: 1fr; border: 2px solid var(--color-bv-black); }
+.bv-grid > * { border-bottom: 2px solid var(--color-bv-black); }
+.bv-grid > *:last-child { border-bottom: 0; }
+@media (min-width: 768px) {
+  .bv-grid { grid-template-columns: 1fr 1fr; }
+  .bv-grid > * { border-right: 2px solid var(--color-bv-black); }
+  .bv-grid > *:nth-child(2n) { border-right: 0; }
+  .bv-grid > *:nth-last-child(-n+2) { border-bottom: 0; }
+}
+/* dark-background grid (light hairlines) */
+.bv-grid-dark { border-color: rgba(255, 255, 255, 0.2); }
+.bv-grid-dark > * { border-color: rgba(255, 255, 255, 0.2); }
+
+/* reveal-on-scroll (enhances already-visible content) */
+.bv-reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease-bv), transform .7s var(--ease-bv); }
+.bv-reveal.in { opacity: 1; transform: none; }
+
+/* hero headline load */
+.bv-clip-1, .bv-clip-2 { display: block; position: relative; animation: bv-clipUp .9s var(--ease-bv) both; }
+.bv-clip-2 { animation-delay: .13s; }
+@keyframes bv-clipUp { from { clip-path: inset(0 0 102% 0); transform: translateY(.18em); } to { clip-path: inset(0 0 -10% 0); transform: none; } }
+.bv-fade { animation: bv-fadeUp .8s var(--ease-bv) both; }
+@keyframes bv-fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes bv-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .bv-reveal { opacity: 1; transform: none; }
+  .bv-clip-1, .bv-clip-2 { clip-path: none; transform: none; }
 }

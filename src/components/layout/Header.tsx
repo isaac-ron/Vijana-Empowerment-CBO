@@ -21,20 +21,22 @@ export default function Header() {
     href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(href + '/');
 
   return (
-    <header className="sticky top-0 z-50 bg-surface/90 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
-      <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-3 max-w-container-max mx-auto gap-6">
-        <Link href="/" className="flex items-center shrink-0" aria-label="Vijana Empowerment Initiative home">
+    <header className="sticky top-0 z-50 bg-[#120d0b] text-[#fdf3e8] border-b-2 border-black">
+      <nav className="bv-wrap flex justify-between items-center py-3 gap-6">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="Vijana Empowerment Initiative home">
+          <Image src="/logo-mark.svg" alt="" aria-hidden width={63} height={60} priority className="h-12 w-auto shrink-0" />
           <Image
-            src="/logo-lockup.svg"
-            alt="Vijana Empowerment Initiative"
+            src="/logo-wordmark-light.svg"
+            alt=""
+            aria-hidden
             width={300}
-            height={120}
+            height={42}
             priority
-            className="h-16 md:h-20 w-auto object-contain"
+            className="hidden sm:block h-6 w-auto"
           />
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map((link) => {
             const active = isActive(link.href);
             return (
@@ -42,9 +44,10 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={
-                  active
-                    ? 'text-primary text-label-md uppercase tracking-widest font-bold border-b-2 border-secondary pb-1 transition-colors'
-                    : 'text-on-surface text-label-md uppercase tracking-widest hover:text-primary pb-1 border-b-2 border-transparent transition-colors'
+                  'relative font-semibold text-[0.95rem] pb-1 transition-colors ' +
+                  (active
+                    ? 'text-white after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:bg-[#fa7f2a]'
+                    : 'text-[#fdf3e8]/80 hover:text-white')
                 }
               >
                 {link.label}
@@ -54,24 +57,18 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
-          <Link
-            href="/get-involved#apply"
-            className="hidden lg:inline-block px-6 py-2.5 rounded-full border-2 border-secondary text-secondary text-label-md uppercase tracking-widest hover:bg-secondary hover:text-white transition-all"
-          >
+          <Link href="/get-involved#apply" className="bv-btn bv-btn-line hidden lg:inline-flex">
             Apply
           </Link>
-          <Link
-            href="/get-involved#donate-form"
-            className="px-6 py-2.5 rounded-full bg-primary text-on-primary text-label-md uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all shadow-md"
-          >
-            Donate
+          <Link href="/get-involved#donate-form" className="bv-btn bv-btn-red">
+            Donate <span className="arr" aria-hidden>→</span>
           </Link>
           <button
             type="button"
             aria-label="Toggle menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden p-2 text-on-surface"
+            className="md:hidden p-2 text-[#fdf3e8]"
           >
             <span className="material-symbols-outlined">{open ? 'close' : 'menu'}</span>
           </button>
@@ -79,8 +76,8 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-outline-variant/30 bg-surface">
-          <ul className="flex flex-col px-margin-mobile py-4 gap-1 max-w-container-max mx-auto">
+        <div className="md:hidden border-t border-white/10 bg-[#120d0b]">
+          <ul className="bv-wrap flex flex-col py-4 gap-1">
             {NAV_LINKS.map((link) => {
               const active = isActive(link.href);
               return (
@@ -89,9 +86,8 @@ export default function Header() {
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className={
-                      active
-                        ? 'block py-3 px-2 text-primary font-bold text-label-md uppercase tracking-widest border-l-2 border-secondary'
-                        : 'block py-3 px-2 text-on-surface text-label-md uppercase tracking-widest hover:text-primary transition-colors'
+                      'block py-3 px-1 font-display font-bold text-lg ' +
+                      (active ? 'text-[#fa7f2a]' : 'text-[#fdf3e8] hover:text-[#fa7f2a]')
                     }
                   >
                     {link.label}
@@ -99,13 +95,13 @@ export default function Header() {
                 </li>
               );
             })}
-            <li className="pt-2">
+            <li className="pt-3">
               <Link
                 href="/get-involved#apply"
                 onClick={() => setOpen(false)}
-                className="block text-center px-6 py-2.5 rounded-full border-2 border-secondary text-secondary text-label-md uppercase tracking-widest"
+                className="bv-btn bv-btn-line w-full justify-center"
               >
-                Apply
+                Apply to train
               </Link>
             </li>
           </ul>

@@ -2,93 +2,98 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const PROGRAMS = [
+  { href: '/programs/fashion-and-design', label: 'Vijana Fashion Forge' },
+  { href: '/programs/beauty-therapy', label: 'Glow with Vijana' },
+  { href: '/programs/driving-mechanics', label: 'Vijana Wheels' },
+  { href: '/programs/computer-training', label: 'Vijana Digital Hub' },
+];
+
+const ORG = [
+  { href: '/about', label: 'About us' },
+  { href: '/impact', label: 'Our impact' },
+  { href: '/get-involved#partnership', label: 'Partners' },
+  { href: '/get-involved', label: 'Get involved' },
+];
+
 export default function Footer() {
   return (
-    <footer className="w-full px-margin-mobile md:px-margin-desktop py-16 bg-[#f5efeb] text-on-surface border-t border-outline-variant/30">
-      <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
-        <div className="space-y-6">
-          <Link href="/" className="inline-flex items-center" aria-label="Vijana Empowerment Initiative home">
-            <Image
-              src="/logo-wordmark.svg"
-              alt="Vijana Empowerment Initiative"
-              width={280}
-              height={90}
-              className="h-16 w-auto object-contain"
-            />
-          </Link>
-          <p className="text-body-md text-on-surface-variant leading-relaxed">
-            Empowering youth for a resilient future through vocational excellence and community
-            partnership. Based in Sotik Sub-County, Bomet County, Kenya.
-          </p>
-          <div className="flex gap-3">
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="w-10 h-10 rounded-full bg-white border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-white hover:border-transparent transition-colors"
-            >
-              <span className="material-symbols-outlined text-[20px]">public</span>
-            </a>
-            <a
-              href="#"
-              aria-label="Email us"
-              className="w-10 h-10 rounded-full bg-white border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-white hover:border-transparent transition-colors"
-            >
-              <span className="material-symbols-outlined text-[20px]">mail</span>
-            </a>
-            <a
-              href="#"
-              aria-label="Share"
-              className="w-10 h-10 rounded-full bg-white border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:bg-secondary-container hover:text-white hover:border-transparent transition-colors"
-            >
-              <span className="material-symbols-outlined text-[20px]">share</span>
-            </a>
+    <footer className="bg-[#120d0b] text-[#fdf3e8]/80">
+      <div className="bv-wrap py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          <div className="md:col-span-5 space-y-6">
+            <Link href="/" className="flex items-center gap-3" aria-label="Vijana Empowerment Initiative home">
+              <Image src="/logo-mark.svg" alt="" aria-hidden width={63} height={60} className="h-14 w-auto shrink-0" />
+              <Image
+                src="/logo-wordmark-light.svg"
+                alt=""
+                aria-hidden
+                width={320}
+                height={45}
+                className="h-8 w-auto"
+              />
+            </Link>
+            <p className="text-[#fdf3e8]/60 max-w-sm leading-relaxed">
+              A registered community based organisation training young people in Sotik Sub-County,
+              Bomet County, to earn a living from a trade.
+            </p>
+          </div>
+
+          <div className="md:col-span-2 space-y-5">
+            <h4 className="font-display text-[0.74rem] tracking-[0.14em] uppercase text-[#fa7f2a] font-bold">
+              Programs
+            </h4>
+            <ul className="space-y-3">
+              {PROGRAMS.map((p) => (
+                <li key={p.href}>
+                  <Link href={p.href} className="text-[#fdf3e8]/80 hover:text-white transition-colors">
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-2 space-y-5">
+            <h4 className="font-display text-[0.74rem] tracking-[0.14em] uppercase text-[#fa7f2a] font-bold">
+              Organisation
+            </h4>
+            <ul className="space-y-3">
+              {ORG.map((o) => (
+                <li key={o.label}>
+                  <Link href={o.href} className="text-[#fdf3e8]/80 hover:text-white transition-colors">
+                    {o.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-3 space-y-5">
+            <h4 className="font-display text-[0.74rem] tracking-[0.14em] uppercase text-[#fa7f2a] font-bold">
+              Contact
+            </h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-[#fa7f2a] text-[20px]">location_on</span>
+                <span className="text-[#fdf3e8]/80">Sotik Town Center, Bomet County, Kenya</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-[#fa7f2a] text-[20px]">mail</span>
+                <span className="text-[#fdf3e8]/80">hello@vijanaempowerment.org</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-[#fa7f2a] text-[20px]">phone</span>
+                <span className="text-[#fdf3e8]/80">+254 700 000 000</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="space-y-6">
-          <h4 className="text-label-md uppercase tracking-widest text-primary">Quick Links</h4>
-          <ul className="space-y-3 text-body-md">
-            <li><Link href="/programs" className="text-on-surface-variant hover:text-secondary transition-colors">Programs</Link></li>
-            <li><Link href="/about" className="text-on-surface-variant hover:text-secondary transition-colors">About Us</Link></li>
-            <li><Link href="/impact" className="text-on-surface-variant hover:text-secondary transition-colors">Impact Report</Link></li>
-            <li><Link href="/get-involved" className="text-on-surface-variant hover:text-secondary transition-colors">Get Involved</Link></li>
-          </ul>
+        <div className="mt-14 pt-6 border-t border-white/12 flex flex-col sm:flex-row justify-between gap-3 text-[#fdf3e8]/50 text-sm">
+          <span>© {new Date().getFullYear()} Vijana Empowerment Initiative · Registered CBO</span>
+          <span>Sotik Sub-County · Bomet County · Kenya</span>
         </div>
-
-        <div className="space-y-6">
-          <h4 className="text-label-md uppercase tracking-widest text-primary">Programs</h4>
-          <ul className="space-y-3 text-body-md">
-            <li><Link href="/programs/fashion-and-design" className="text-on-surface-variant hover:text-secondary transition-colors">Vijana Fashion Forge</Link></li>
-            <li><Link href="/programs/beauty-therapy" className="text-on-surface-variant hover:text-secondary transition-colors">Glow with Vijana</Link></li>
-            <li><Link href="/programs/driving-mechanics" className="text-on-surface-variant hover:text-secondary transition-colors">Vijana Wheels</Link></li>
-            <li><Link href="/programs/computer-training" className="text-on-surface-variant hover:text-secondary transition-colors">Vijana Digital Hub</Link></li>
-          </ul>
-        </div>
-
-        <div className="space-y-6">
-          <h4 className="text-label-md uppercase tracking-widest text-primary">Contact Info</h4>
-          <ul className="space-y-4 text-body-md">
-            <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-secondary">location_on</span>
-              <span className="text-on-surface-variant">Sotik Town Center, Bomet County, Kenya</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-secondary">mail</span>
-              <span className="text-on-surface-variant">hello@vijanaempowerment.org</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-secondary">phone</span>
-              <span className="text-on-surface-variant">+254 700 000 000</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="max-w-container-max mx-auto pt-8 border-t border-outline-variant/40 text-center">
-        <p className="text-label-sm text-on-surface-variant/80">
-          © {new Date().getFullYear()} Vijana Empowerment Initiative. Registered CBO &middot;
-          Registration No: VEI/CBO/STK/2024/001
-        </p>
       </div>
     </footer>
   );

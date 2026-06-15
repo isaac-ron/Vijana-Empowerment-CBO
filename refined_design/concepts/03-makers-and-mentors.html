@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vijana Empowerment — Makers &amp; Mentors (Concept 03)</title>
+<meta name="description" content="A refined, foundation-style direction for Vijana Empowerment in the brand's red and orange: investing in young people in Sotik, Kenya." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500;1,6..96,600&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#9a1e14;
+    --red-deep:#5e0f0a;
+    --red-deeper:#360a06;
+    --orange:#fa7f2a;
+    --gold:#bd7b1b;
+    --amber:#f6a72c;
+    --ink:#241612;
+    --ink-soft:#5b443d;
+    --muted:#6c554d;
+    --paper:#fdf8f2;
+    --paper-2:#f6ebdd;
+    --white:#ffffff;
+    --line:color-mix(in oklab,var(--ink) 14%,transparent);
+    --line-soft:color-mix(in oklab,var(--ink) 8%,transparent);
+    --maxw:1200px;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --display:"Bodoni Moda",Didot,Georgia,serif;
+    --body:"Familjen Grotesk",system-ui,sans-serif;
+    font-synthesis:none;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.1;letter-spacing:-.005em;margin:0;text-wrap:balance}
+  p{margin:0;text-wrap:pretty}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(22px,5vw,60px)}
+
+  .kicker{font-family:var(--body);font-weight:700;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:.7em}
+  .kicker::before{content:"";width:24px;height:2px;background:var(--orange)}
+
+  .brand{display:flex;align-items:center;gap:.6em}
+  .brand .badge{width:44px;height:44px;border-radius:50%;background:var(--white);display:grid;place-items:center;flex:none;box-shadow:0 2px 10px -4px rgba(54,10,6,.35)}
+  .brand .badge img{width:32px;height:32px}
+  .brand .wm{display:flex;flex-direction:column;line-height:1}
+  .brand .wm b{font-family:var(--display);font-weight:600;font-size:1.32rem;letter-spacing:0;color:var(--red)}
+  .brand .wm small{font-family:var(--body);font-size:.55rem;letter-spacing:.34em;text-transform:uppercase;font-weight:600;color:var(--orange);margin-top:3px}
+
+  .btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--body);font-weight:700;font-size:.96rem;
+    padding:.8em 1.55em;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .4s var(--ease),background .3s,color .3s,border-color .3s}
+  .btn .arr{transition:transform .4s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+  .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-deep);transform:translateY(-2px)}
+  .btn-orange{background:var(--orange);color:#2a1402}.btn-orange:hover{background:var(--amber);transform:translateY(-2px)}
+  .btn-out{border-color:var(--line);color:var(--ink)}.btn-out:hover{border-color:var(--red);background:var(--red);color:#fff}
+
+  /* ===== NAV ===== */
+  header.nav{position:sticky;top:0;z-index:50;background:color-mix(in oklab,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:16px}
+  nav.links{display:flex;gap:30px}
+  nav.links a{font-weight:500;font-size:.98rem;color:var(--ink-soft);position:relative;padding-block:3px}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--orange);transition:width .4s var(--ease)}
+  nav.links a:hover{color:var(--ink)}nav.links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .lang{font-family:var(--body);font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:.06em}
+  .lang b{color:var(--ink)}.menu-btn{display:none}
+
+  /* ===== HERO ===== */
+  .hero .wrap{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,72px);align-items:center}
+  .hero h1{font-size:clamp(2.7rem,6vw,5rem);font-weight:500;letter-spacing:-.01em;line-height:1.04}
+  .hero h1 em{font-style:italic;font-weight:500;color:var(--red)}
+  .hero .lede{margin-top:26px;color:var(--ink-soft);font-size:clamp(1.05rem,1.5vw,1.2rem);max-width:46ch}
+  .hero .actions{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-figure{position:relative}
+  .hero-figure .frame{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 70px -34px rgba(54,10,6,.5)}
+  .hero-figure .frame img{width:100%;height:100%;object-fit:cover;object-position:60% 25%}
+  .hero-figure .tile{position:absolute;bottom:26px;left:-26px;background:var(--white);border-radius:16px;padding:16px 20px;box-shadow:0 18px 40px -20px rgba(54,10,6,.35);display:flex;gap:14px;align-items:center}
+  .hero-figure .tile .n{font-family:var(--display);font-weight:600;font-size:2.2rem;line-height:1;color:var(--red)}
+  .hero-figure .tile .l{font-family:var(--body);font-size:.82rem;color:var(--ink-soft);max-width:16ch}
+  .hero-figure .seed{position:absolute;top:-22px;right:-18px;width:96px;height:96px;border-radius:50%;overflow:hidden;border:5px solid var(--paper);box-shadow:0 12px 30px -14px rgba(54,10,6,.4)}
+  .hero-figure .seed img{width:100%;height:100%;object-fit:cover}
+
+  /* ===== INVEST / COLLAGE ===== */
+  .invest{background:var(--white)}
+  .invest .wrap{padding-block:clamp(72px,10vw,128px)}
+  .collage{position:relative;max-width:760px;margin-inline:auto;text-align:center;min-height:clamp(380px,46vw,520px);display:grid;place-items:center}
+  .collage .halo{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);width:clamp(300px,40vw,460px);aspect-ratio:1;border-radius:50%;
+    background:radial-gradient(circle at 50% 40%,color-mix(in oklab,var(--orange) 26%,var(--white)),color-mix(in oklab,var(--paper-2) 80%,var(--white)) 72%);z-index:0}
+  .collage .center{position:relative;z-index:2;max-width:30ch}
+  .collage .center h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:500}
+  .collage .center p{margin-top:16px;color:var(--ink-soft)}
+  .collage .center .btn{margin-top:24px}
+  .collage figure{position:absolute;z-index:1;margin:0;border-radius:14px;overflow:hidden;box-shadow:0 20px 44px -24px rgba(54,10,6,.45);width:clamp(96px,13vw,150px);aspect-ratio:4/5;transition:transform .6s var(--ease)}
+  .collage figure img{width:100%;height:100%;object-fit:cover}
+  .collage figure:hover{transform:translateY(-6px) rotate(0deg)!important}
+  .collage .f1{top:2%;left:2%;transform:rotate(-6deg)}
+  .collage .f2{top:8%;right:1%;transform:rotate(5deg)}
+  .collage .f3{bottom:4%;left:6%;transform:rotate(4deg)}
+  .collage .f4{bottom:2%;right:5%;transform:rotate(-5deg);aspect-ratio:1/1;border-radius:50%}
+
+  /* ===== PROGRAMS ===== */
+  .programs .wrap{padding-block:clamp(72px,10vw,124px)}
+  .prog-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:18px}
+  .prog-head h2{font-size:clamp(2.1rem,4.4vw,3.3rem);font-weight:500;max-width:16ch}
+  .prog-head p{color:var(--ink-soft);max-width:34ch}
+  .plist{border-top:1px solid var(--red)}
+  .prow{display:grid;grid-template-columns:auto 1fr auto auto;gap:clamp(18px,3vw,40px);align-items:center;padding:26px 0;border-bottom:1px solid var(--line);transition:padding-left .4s var(--ease)}
+  .prow:hover{padding-left:12px}
+  .prow .no{font-family:var(--body);font-weight:700;font-size:1rem;color:var(--orange);width:2ch}
+  .prow .meta .name{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:500}
+  .prow .meta .desc{color:var(--ink-soft);font-size:.98rem;margin-top:4px;max-width:52ch}
+  .prow .trade{font-family:var(--body);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .prow .thumb{width:84px;height:64px;border-radius:10px;overflow:hidden;opacity:.001;transform:translateX(10px) scale(.96);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+  .prow .thumb img{width:100%;height:100%;object-fit:cover}
+  .prow:hover .thumb{opacity:1;transform:none}
+  .prow .arr{font-size:1.2rem;color:var(--red);transition:transform .4s var(--ease)}.prow:hover .arr{transform:translateX(5px)}
+
+  /* ===== ORIGINS ===== */
+  .origins{background:var(--red-deeper);color:#f6e3da;position:relative;overflow:hidden}
+  .origins .ring{position:absolute;right:-140px;top:-120px;width:460px;height:460px;border-radius:50%;border:54px solid rgba(250,127,42,.1)}
+  .origins .wrap{padding-block:clamp(72px,10vw,124px);position:relative}
+  .origins-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,90px);align-items:center}
+  .origins .kicker{color:var(--amber)}.origins .kicker::before{background:var(--orange)}
+  .origins h2{font-size:clamp(2.1rem,4vw,3.1rem);font-weight:500;color:#fff;margin-top:16px}
+  .origins .body{color:rgba(246,227,218,.82);margin-top:22px}.origins .body p+p{margin-top:16px}
+  .quote{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.32;color:#fff}
+  .quote footer{font-family:var(--body);font-style:normal;font-weight:600;font-size:.92rem;color:var(--amber);margin-top:20px}
+
+  /* ===== IMPACT ===== */
+  .impact{background:var(--white)}
+  .impact .wrap{padding-block:clamp(64px,8vw,104px)}
+  .impact .top{text-align:center;max-width:40ch;margin:0 auto 52px}
+  .impact .top h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:500}
+  .imp-row{display:grid;grid-template-columns:repeat(4,1fr)}
+  .imp-cell{text-align:center;padding:0 clamp(14px,2.5vw,30px);border-left:1px solid var(--line)}
+  .imp-cell:first-child{border-left:0}
+  .imp-cell .n{font-family:var(--display);font-weight:500;font-size:clamp(2.8rem,5vw,4rem);line-height:1;color:var(--red)}
+  .imp-cell .n .u{color:var(--orange);font-size:.5em;vertical-align:super}
+  .imp-cell .l{font-family:var(--body);color:var(--ink-soft);font-size:.92rem;margin-top:12px;max-width:20ch;margin-inline:auto}
+
+  /* ===== PARTNER ===== */
+  .partner .wrap{padding-block:clamp(56px,8vw,96px)}
+  .partner-card{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(22px,4vw,48px);align-items:center;background:var(--paper-2);border:1px solid var(--line-soft);border-radius:26px;padding:clamp(26px,4vw,44px)}
+  .partner-card .seal{width:72px;height:72px;border-radius:50%;background:var(--white);display:grid;place-items:center;box-shadow:0 12px 28px -16px rgba(54,10,6,.4)}
+  .partner-card .seal svg{width:34px;height:34px;color:var(--red)}
+  .partner-card .ttl{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:500}
+  .partner-card .ds{color:var(--ink-soft);margin-top:8px;max-width:52ch}
+
+  /* ===== STORIES ===== */
+  .news .wrap{padding-block:clamp(64px,9vw,112px)}
+  .news-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
+  .news-head h2{font-size:clamp(2.1rem,4vw,3.1rem);font-weight:500}
+  .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .story{display:flex;flex-direction:column}
+  .story .ph{border-radius:14px;overflow:hidden;aspect-ratio:5/4;margin-bottom:18px}
+  .story .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .story:hover .ph img{transform:scale(1.05)}
+  .story time{font-family:var(--body);font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .story h3{font-size:1.42rem;font-weight:500;margin-top:8px;line-height:1.18}
+  .story p{color:var(--ink-soft);font-size:.96rem;margin-top:8px}
+  .story .rd{margin-top:auto;padding-top:14px;color:var(--red);font-family:var(--body);font-weight:700;font-size:.9rem;display:inline-flex;gap:.5em;align-items:center}
+
+  /* ===== CTA ===== */
+  .cta{background:var(--red);color:#fff;position:relative;overflow:hidden}
+  .cta::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(250,127,42,.5),transparent 65%);top:-200px;right:-120px}
+  .cta .wrap{padding-block:clamp(64px,9vw,112px);position:relative;text-align:center}
+  .cta .kicker{color:var(--amber)}.cta .kicker::before{background:var(--orange)}
+  .cta h2{font-size:clamp(2.3rem,5vw,3.7rem);font-weight:500;max-width:18ch;margin:16px auto 0}
+  .cta p{margin:18px auto 0;max-width:44ch;color:rgba(255,255,255,.88);font-size:1.06rem}
+  .cta .actions{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cta .btn-white{background:#fff;color:var(--red)}.cta .btn-white:hover{transform:translateY(-2px)}
+  .cta .btn-line{border-color:rgba(255,255,255,.55);color:#fff}.cta .btn-line:hover{background:#fff;color:var(--red)}
+
+  /* ===== FOOTER ===== */
+  footer.ft{background:var(--red-deeper);color:rgba(246,227,218,.82)}
+  .ft .wrap{padding-block:clamp(52px,7vw,80px)}
+  .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:38px}
+  .ft .brand{margin-bottom:14px}.ft .brand .wm b{color:#fff}.ft .brand .badge{background:var(--paper)}
+  .ft p{color:rgba(246,227,218,.6);font-size:.95rem;max-width:32ch}
+  .ft h4{font-family:var(--body);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0 0 14px;font-weight:700}
+  .ft ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .ft ul a{color:rgba(246,227,218,.82);font-size:.95rem}.ft ul a:hover{color:#fff}
+  .ft-bottom{margin-top:46px;padding-top:22px;border-top:1px solid rgba(246,227,218,.18);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:rgba(246,227,218,.52);font-size:.85rem}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:960px){
+    .hero-grid,.origins-grid{grid-template-columns:1fr}
+    .hero-figure{max-width:440px;margin-inline:auto}
+    .news-grid{grid-template-columns:1fr 1fr}
+    .imp-row{grid-template-columns:1fr 1fr;gap:36px 0}.imp-cell:nth-child(odd){border-left:0}
+    .ft-top{grid-template-columns:1fr 1fr}
+    .partner-card{grid-template-columns:1fr;text-align:center;justify-items:center}
+  }
+  @media(max-width:620px){
+    nav.links,.nav-cta .btn,.lang{display:none}.menu-btn{display:inline-flex}
+    .prow{grid-template-columns:auto 1fr auto;gap:14px}.prow .thumb{display:none}
+    .news-grid{grid-template-columns:1fr}
+    .imp-row{grid-template-columns:1fr}.imp-cell{padding-block:20px;border-bottom:1px solid var(--line)}
+    .collage figure{display:none}.collage .halo{width:300px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}.prow .thumb{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#" aria-label="Vijana Empowerment Initiative home">
+      <span class="badge"><img src="../../public/Icon Only.svg" alt="" aria-hidden="true"></span>
+      <span class="wm"><b>Vijana</b><small>Empowerment Initiative</small></span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#invest">Who we are</a><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#news">Stories</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="lang"><b>EN</b> · SW</span>
+      <a class="btn btn-red" href="#cta">Support the work</a>
+      <button class="btn btn-out menu-btn" aria-label="Open menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="kicker">A community based organisation in Sotik, Kenya</span>
+      <h1>Young people here are ready to build their own <em>future</em>.</h1>
+      <p class="lede">Vijana Empowerment teaches school leavers, young mothers, and youth with disabilities a trade that pays, then walks with them into their first job or first business.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="#programs">Explore the programs <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-out" href="#invest">How we work</a>
+      </div>
+    </div>
+    <div class="hero-figure reveal">
+      <div class="frame"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=1000&q=80" alt="A young Kenyan woman in vibrant print, photographed with quiet confidence"></div>
+      <div class="seed"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=300&q=70" alt="Hands cupping a young green seedling"></div>
+      <div class="tile"><span class="n">500+</span><span class="l">young people trained since the pilot cohort</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="invest" id="invest">
+  <div class="wrap">
+    <div class="collage reveal">
+      <div class="halo" aria-hidden="true"></div>
+      <figure class="f1"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=400&q=75" alt="Sewing in the tailoring workshop"></figure>
+      <figure class="f2"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=75" alt="A beauty therapy session"></figure>
+      <figure class="f3"><img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=400&q=75" alt="Engine maintenance"></figure>
+      <figure class="f4"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=75" alt="Working at a computer"></figure>
+      <div class="center">
+        <span class="kicker" style="justify-content:center">What we invest in</span>
+        <h2 style="margin-top:14px">We teach trades the local market actually pays for.</h2>
+        <p>Not certificates for their own sake. Skills, tools, and mentorship that turn into income in Sotik.</p>
+        <a class="btn btn-red" href="#programs">See the four programs <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="prog-head">
+      <h2 class="reveal">Four programs, one workshop in Sotik.</h2>
+      <p class="reveal">Each trade is chosen with local employers and finished with a plan for paid work.</p>
+    </div>
+    <div class="plist reveal">
+      <a class="prow" href="#"><span class="no">01</span><span class="meta"><span class="name">Vijana Fashion Forge</span><span class="desc">Garment design, pattern making, and the business of a tailoring shop.</span></span><span class="trade">Fashion &amp; Textiles</span><span class="thumb"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=300&q=70" alt=""></span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="prow" href="#"><span class="no">02</span><span class="meta"><span class="name">Glow with Vijana</span><span class="desc">Beauty therapy, skin care, and salon management with real client hours.</span></span><span class="trade">Cosmetology</span><span class="thumb"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=300&q=70" alt=""></span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="prow" href="#"><span class="no">03</span><span class="meta"><span class="name">Vijana Wheels</span><span class="desc">Practical driving, safety certification, and vehicle maintenance.</span></span><span class="trade">Driving &amp; Mechanics</span><span class="thumb"><img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=300&q=70" alt=""></span><span class="arr" aria-hidden="true">→</span></a>
+      <a class="prow" href="#"><span class="no">04</span><span class="meta"><span class="name">Vijana Digital Hub</span><span class="desc">Computer literacy, web development, and digital marketing for online income.</span></span><span class="trade">ICT</span><span class="thumb"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=70" alt=""></span><span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="origins">
+  <span class="ring" aria-hidden="true"></span>
+  <div class="wrap origins-grid">
+    <div class="reveal">
+      <span class="kicker">Born in Sotik</span>
+      <h2>We started where the gap was widest.</h2>
+      <div class="body">
+        <p>Vijana Empowerment grew out of one observation: young people in Sotik Sub-County wanted to work, but the practical training that leads to work was out of reach, especially for those carrying the most.</p>
+        <p>Registered as a CBO with the Department of Social Services, we partner with local businesses, faith groups, and government to keep the workshop open and the trades current.</p>
+      </div>
+    </div>
+    <blockquote class="quote reveal">
+      &ldquo;We don't hand out certificates. We hand young people a trade, the tools to practise it, and someone who picks up the phone after graduation.&rdquo;
+      <footer>— The team at Vijana Empowerment</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="top reveal">
+      <span class="kicker" style="justify-content:center">The measure that matters</span>
+      <h2 style="margin-top:14px">Did a young person end up earning?</h2>
+    </div>
+    <div class="imp-row">
+      <div class="imp-cell reveal"><div class="n"><span data-count="80">0</span><span class="u">%</span></div><div class="l">placement goal within six months of finishing</div></div>
+      <div class="imp-cell reveal"><div class="n"><span class="u">KES</span><span data-count="4.5" data-dec="1">0</span><span class="u">M</span></div><div class="l">annual budget on tools and instructors</div></div>
+      <div class="imp-cell reveal"><div class="n">50&ndash;100</div><div class="l">trainees per cohort at full scale</div></div>
+      <div class="imp-cell reveal"><div class="n"><span data-count="4">0</span></div><div class="l">trades, chosen with local employers</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="partner">
+  <div class="wrap">
+    <div class="partner-card reveal">
+      <div class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l-4-4 1.5-1.5L11 14l4.5-4.5L17 11z"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <div>
+        <div class="kicker">Founding partner</div>
+        <div class="ttl">Bethesda House of Grace Ministries, UK</div>
+        <p class="ds">A three-year partnership funding mentorship, equipment, and the entrepreneurship support that helps graduates open something of their own.</p>
+      </div>
+      <a class="btn btn-out" href="#">Partner with us <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="wrap">
+    <div class="news-head">
+      <h2 class="reveal">News &amp; stories</h2>
+      <a class="btn btn-out reveal" href="#">All stories <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <div class="news-grid">
+      <article class="story reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=75" alt="Tailoring workshop"></div><time>April 2026</time><h3>The Fashion Forge pilot takes its first wholesale order</h3><p>Twelve trainees moved from practice pieces to a paid run of school uniforms.</p><span class="rd">Read the story <span aria-hidden="true">→</span></span></article>
+      <article class="story reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=75" alt="Young people at a computer"></div><time>March 2026</time><h3>Evening classes open at the Digital Hub for young mothers</h3><p>A timetable built around childcare brings a new group of trainees in after dark.</p><span class="rd">Read the story <span aria-hidden="true">→</span></span></article>
+      <article class="story reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=600&q=75" alt="Engine maintenance"></div><time>February 2026</time><h3>Why Bomet's young people are choosing a trade over the city</h3><p>A look at what keeps graduates working close to home.</p><span class="rd">Read the story <span aria-hidden="true">→</span></span></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <div class="wrap">
+    <span class="kicker" style="justify-content:center">Support the work</span>
+    <h2>Invest in one young person's trade.</h2>
+    <p>A gift covers fabric, engine parts, lab time, and the mentor who stays in touch long after the course ends.</p>
+    <div class="actions">
+      <a class="btn btn-white" href="#">Donate now <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-line" href="#">Become a partner</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <a class="brand" href="#"><span class="badge"><img src="../../public/Icon Only.svg" alt="" aria-hidden="true"></span><span class="wm"><b>Vijana</b><small>Empowerment Initiative</small></span></a>
+        <p>Vijana Empowerment Initiative — a registered community based organisation in Sotik Sub-County, Bomet County, Kenya.</p>
+      </div>
+      <div><h4>Programs</h4><ul><li><a href="#">Fashion Forge</a></li><li><a href="#">Glow with Vijana</a></li><li><a href="#">Vijana Wheels</a></li><li><a href="#">Digital Hub</a></li></ul></div>
+      <div><h4>Organisation</h4><ul><li><a href="#">About</a></li><li><a href="#">Impact</a></li><li><a href="#">Partners</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h4>Get involved</h4><ul><li><a href="#">Donate</a></li><li><a href="#">Volunteer</a></li><li><a href="#">Apply to train</a></li></ul></div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 Vijana Empowerment Initiative · Registered CBO, Department of Social Services</span>
+      <span>Concept 03 — Makers &amp; Mentors</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');}); }
+  var counters=document.querySelectorAll('[data-count]');
+  function run(el){var t=parseFloat(el.getAttribute('data-count')),d=+(el.getAttribute('data-dec')||0),dur=1300,t0=null;
+    function s(ti){if(!t0)t0=ti;var p=Math.min((ti-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=(t*e).toFixed(d);if(p<1)requestAnimationFrame(s);else el.textContent=t.toFixed(d);}
+    requestAnimationFrame(s);}
+  if(reduce||!('IntersectionObserver' in window)){counters.forEach(function(el){el.textContent=parseFloat(el.getAttribute('data-count')).toFixed(+(el.getAttribute('data-dec')||0));});}
+  else{var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);cio.unobserve(e.target);}});},{threshold:.6});counters.forEach(function(el){cio.observe(el);});}
+})();
+</script>
+</body>
+</html>

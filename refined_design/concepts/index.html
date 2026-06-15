@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vijana Empowerment — Redesign Concepts</title>
+<meta name="description" content="Three landing-page design directions for Vijana Empowerment Initiative, all built on the brand's red and orange." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1a0f0c;--panel:#241612;--ink:#f6ece4;--muted:#b29a90;--line:rgba(246,236,228,.12);
+    --red:#9a1e14;--orange:#fa7f2a;--amber:#f6a72c;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.04;letter-spacing:-.025em;margin:0}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+
+  header{padding-block:clamp(48px,8vw,88px) clamp(32px,5vw,52px)}
+  .brandline{display:flex;align-items:center;gap:.7em;margin-bottom:34px}
+  .brandline .badge{width:50px;height:50px;border-radius:50%;background:#fff;display:grid;place-items:center}
+  .brandline .badge img{width:38px;height:38px}
+  .brandline b{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.25rem;letter-spacing:-.01em;text-transform:uppercase}
+  .brandline small{display:block;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);font-weight:600;margin-top:2px}
+  header h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2.4rem,6vw,4.4rem);max-width:18ch}
+  header p{margin-top:22px;color:var(--muted);max-width:64ch;font-size:clamp(1.05rem,1.6vw,1.2rem)}
+  header .meta{margin-top:18px;color:var(--muted);font-size:.92rem;max-width:64ch}
+  header .meta b{color:var(--ink);font-weight:600}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:clamp(56px,9vw,100px)}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .5s var(--ease),border-color .4s}
+  .card:hover{transform:translateY(-6px);border-color:rgba(246,236,228,.28)}
+  .shot{aspect-ratio:16/11;position:relative;border-bottom:1px solid var(--line)}
+  .shot .swatch{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;gap:6px}
+  .shot .dots{display:flex;gap:7px;margin-bottom:auto}
+  .shot .dots i{width:13px;height:13px;border-radius:50%;display:block}
+  .shot .label{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.9rem;letter-spacing:-.02em}
+  .shot .ref{font-family:"Bricolage Grotesque",sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+
+  .s1{background:linear-gradient(150deg,#360a06,#5e0f0a 55%,#9a1e14)}
+  .s1 .label{color:#fff}.s1 .ref{color:var(--orange)}
+  .s2{background:linear-gradient(150deg,#fdf4ea,#f8e9d9)}
+  .s2 .label{color:#9a1e14}.s2 .ref{color:#c6571a}
+  .s3{background:linear-gradient(150deg,#fdf8f2,#f6ebdd)}
+  .s3 .label{color:#5e0f0a}.s3 .ref{color:#bd7b1b}
+
+  .body{padding:24px;display:flex;flex-direction:column;gap:14px;flex:1}
+  .body .n{font-family:"Bricolage Grotesque",sans-serif;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:700}
+  .body h3{font-size:1.5rem;font-weight:700}
+  .body p{color:var(--muted);font-size:.96rem}
+  .body ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.9rem;display:grid;gap:5px}
+  .body .open{margin-top:auto;display:inline-flex;align-items:center;gap:.5em;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;color:var(--ink);padding-top:6px}
+  .body .open .arr{transition:transform .4s var(--ease)}.card:hover .open .arr{transform:translateX(5px)}
+
+  .note{color:var(--muted);font-size:.86rem;padding-bottom:36px;max-width:74ch}
+  footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.86rem}
+
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandline">
+      <span class="badge"><img src="../../public/Icon Only.svg" alt="Vijana Empowerment mark"></span>
+      <span><b>Vijana Empowerment</b><small>Initiative</small></span>
+    </div>
+    <h1>Three ways the homepage could look.</h1>
+    <p>Each direction is a complete, working landing page for the same organisation, built from the references you shared and tuned for a youth-empowerment audience. Open any one full screen, then we narrow to the one that fits.</p>
+    <p class="meta"><b>Faithful to the logo throughout:</b> the brick-red and orange palette and the iris-and-hands mark. <b>What changes between concepts:</b> a different headline typeface per direction, plus pacing, layout, and how loud the type runs.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="grid">
+    <a class="card" href="01-field-and-future.html">
+      <div class="shot s1"><div class="swatch">
+        <div class="dots"><i style="background:#9a1e14"></i><i style="background:#fa7f2a"></i><i style="background:#f6a72c"></i></div>
+        <div class="label">Field &amp; Future</div>
+        <div class="ref">After Vantara · Hempel</div>
+      </div></div>
+      <div class="body">
+        <span class="n">Concept 01 · Cinematic</span>
+        <h3>Field &amp; Future</h3>
+        <p>A full-bleed photographic hero over a deep-maroon wash, with an interactive programs panel. Institutional and donor-facing, warm but grounded.</p>
+        <ul><li>Spectral serif + Hanken Grotesk</li><li>Brick red, maroon &amp; orange</li><li>Click-through "Core Programs" gallery</li></ul>
+        <span class="open">Open full page <span class="arr" aria-hidden="true">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="02-bold-voice.html">
+      <div class="shot s2"><div class="swatch">
+        <div class="dots"><i style="background:#9a1e14"></i><i style="background:#fa7f2a"></i><i style="background:#c6571a"></i></div>
+        <div class="label">Bold Voice</div>
+        <div class="ref">After Climate Fund · WPF</div>
+      </div></div>
+      <div class="body">
+        <span class="n">Concept 02 · Typographic</span>
+        <h3>Bold Voice</h3>
+        <p>Bricolage Grotesque set huge, with the hero image breaking through the headline. A stat ticker and campaign-style news layout. Loud and young.</p>
+        <ul><li>Bricolage Grotesque + Schibsted Grotesk</li><li>Warm cream with brick-red type</li><li>Marquee + "who we back" list</li></ul>
+        <span class="open">Open full page <span class="arr" aria-hidden="true">→</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="03-makers-and-mentors.html">
+      <div class="shot s3"><div class="swatch">
+        <div class="dots"><i style="background:#9a1e14"></i><i style="background:#fa7f2a"></i><i style="background:#bd7b1b"></i></div>
+        <div class="label">Makers &amp; Mentors</div>
+        <div class="ref">After Hejl · Hempel</div>
+      </div></div>
+      <div class="body">
+        <span class="n">Concept 03 · Editorial</span>
+        <h3>Makers &amp; Mentors</h3>
+        <p>An elegant Bodoni serif with italic accents, a floating image collage, and generous whitespace. Reads like an established foundation.</p>
+        <ul><li>Bodoni Moda + Familjen Grotesk</li><li>Warm paper, brick red &amp; gold</li><li>Editorial program list, pull-quote</li></ul>
+        <span class="open">Open full page <span class="arr" aria-hidden="true">→</span></span>
+      </div>
+    </a>
+  </div>
+
+  <p class="note">Mockups use stock photography (Unsplash) as placeholders for real Vijana field photos, and load Manrope &amp; Inter from Google Fonts, so an internet connection is needed to preview them. The mark is the project's actual logo (public/Icon Only.svg); the "Vijana" wordmark is set in Manrope, the closest match to the logo's lettering. For pixel-exact branding, the existing logo-lockup.svg can drop in.</p>
+</div>
+
+<footer><div class="wrap">Vijana Empowerment Initiative · redesign concepts · 2026</div></footer>
+</body>
+</html>
