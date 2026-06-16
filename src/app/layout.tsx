@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
         {/* Boot script: gate the scroll-reveal animation. Runs before paint so there
             is no flash. If hydration/JS later fails, the safety timer still reveals
@@ -21,7 +21,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;document.documentElement.classList.add('reveal-on');window.__bvRevealFallback=setTimeout(function(){var e=document.querySelectorAll('.bv-reveal:not(.in)');for(var i=0;i<e.length;i++)e[i].classList.add('in');},2600);}catch(e){}})();",
+              "(function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;var d=document.documentElement;d.classList.add('reveal-on');window.__bvRevealFallback=setTimeout(function(){d.classList.remove('reveal-on');},2600);}catch(e){}})();",
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

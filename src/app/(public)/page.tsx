@@ -77,7 +77,7 @@ export default function HomePage() {
               <span className="bv-clip-1 block relative z-[1] text-[#5e0f0a]">FUTURE</span>
               <span className="bv-clip-2 block relative z-[3] text-[#9a1e14]">MAKERS</span>
             </h1>
-            <div className="absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 z-[2] w-[clamp(170px,27vw,360px)] aspect-[3/4] bv-border-3 bv-shadow-red overflow-hidden">
+            <div className="absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 z-[2] w-[clamp(150px,27vw,360px)] aspect-[3/4] bv-border-3 bv-shadow-red overflow-hidden">
               <Image
                 src={uns(IMG.portrait, 900)}
                 alt="A young Kenyan woman in vibrant print, looking ahead with confidence"
@@ -89,7 +89,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 md:gap-16 items-end mt-7 md:mt-11">
+          <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 md:gap-16 items-end mt-14 md:mt-11">
             <p className="bv-fade font-display font-bold text-[clamp(1.5rem,2.7vw,2.15rem)] leading-[1.1] tracking-[-0.03em] max-w-[18ch]">
               We train young people in Sotik to earn a living from a real trade, then back them
               through the first job or first business.
