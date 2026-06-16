@@ -74,7 +74,7 @@ export default function HomePage() {
 
           <div className="relative text-center">
             <h1 className="font-display font-extrabold leading-[0.9] tracking-[-0.04em] text-[clamp(4rem,21vw,16rem)]">
-              <span className="bv-clip-1 block relative z-[1] text-[#5e0f0a]">FUTURE</span>
+              <span className="bv-future text-[#5e0f0a]">FUTURE</span>
               <span className="bv-clip-2 block relative z-[3] text-[#9a1e14]">MAKERS</span>
             </h1>
             <div className="absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 z-[2] w-[clamp(150px,27vw,360px)] aspect-[3/4] bv-border-3 bv-shadow-red overflow-hidden">
