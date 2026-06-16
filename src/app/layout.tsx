@@ -15,6 +15,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <head>
+        {/* Boot script: gate the scroll-reveal animation. Runs before paint so there
+            is no flash. If hydration/JS later fails, the safety timer still reveals
+            everything, so content is never permanently hidden on any device. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;document.documentElement.classList.add('reveal-on');window.__bvRevealFallback=setTimeout(function(){var e=document.querySelectorAll('.bv-reveal:not(.in)');for(var i=0;i<e.length;i++)e[i].classList.add('in');},2600);}catch(e){}})();",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link

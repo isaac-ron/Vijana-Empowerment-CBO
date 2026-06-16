@@ -261,9 +261,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); letter-spacing: -0.02
 .bv-grid-dark { border-color: rgba(255, 255, 255, 0.2); }
 .bv-grid-dark > * { border-color: rgba(255, 255, 255, 0.2); }
 
-/* reveal-on-scroll (enhances already-visible content) */
-.bv-reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s var(--ease-bv), transform .7s var(--ease-bv); }
-.bv-reveal.in { opacity: 1; transform: none; }
+/* reveal-on-scroll — content is VISIBLE by default. The hidden/animated state is
+   only applied once JS confirms it can reveal it (the `reveal-on` class is set on
+   <html> before paint by the inline boot script in layout.tsx). If JS/hydration
+   fails for any reason, `reveal-on` never sticks and all content stays visible. */
+.bv-reveal { transition: opacity .7s var(--ease-bv), transform .7s var(--ease-bv); }
+.reveal-on .bv-reveal:not(.in) { opacity: 0; transform: translateY(26px); }
 
 /* hero headline load */
 .bv-clip-1, .bv-clip-2 { display: block; position: relative; animation: bv-clipUp .9s var(--ease-bv) both; }

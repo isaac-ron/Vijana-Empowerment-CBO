@@ -12,6 +12,14 @@ export default function ScrollFX() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // React is alive and this effect runs, so we now own revealing. Cancel the
+    // boot-script safety net (see layout.tsx) that would otherwise reveal-all.
+    const w = window as typeof window & { __bvRevealFallback?: ReturnType<typeof setTimeout> };
+    if (w.__bvRevealFallback) {
+      clearTimeout(w.__bvRevealFallback);
+      w.__bvRevealFallback = undefined;
+    }
+
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Reveals
@@ -31,7 +39,9 @@ export default function ScrollFX() {
             }
           });
         },
-        { threshold: 0.15 },
+        // threshold 0 + a small bottom margin fires as soon as any part enters,
+        // which is reliable even for sections taller than a phone viewport.
+        { threshold: 0, rootMargin: '0px 0px -8% 0px' },
       );
       reveals.forEach((el) => io!.observe(el));
     }
