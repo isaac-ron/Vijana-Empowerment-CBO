@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import ProgramDetail from '@/components/programs/ProgramDetail';
 import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 import { IMG } from '@/lib/images';
+import { pageMetadata, ogImg } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Vijana Digital Hub | Computer Training Program',
+export const metadata: Metadata = pageMetadata({
+  title: 'Vijana Digital Hub — Computer Training',
   description:
     'MS Office, digital literacy, data entry, graphic design, web development, and digital marketing, opening up local employment and the global gig economy.',
-};
+  path: '/programs/computer-training/',
+  image: ogImg(IMG.coding),
+});
 
 export default function DigitalHubPage() {
   return (

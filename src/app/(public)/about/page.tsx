@@ -2,12 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { IMG, uns } from '@/lib/images';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'About Us | Vijana Empowerment Initiative',
+export const metadata: Metadata = pageMetadata({
+  title: 'About Us',
   description:
     'A community-based organization in Sotik Sub-County, Bomet County, serving teenage mothers, orphans, persons with disabilities, and youth seeking self-employment.',
-};
+  path: '/about/',
+});
 
 type Member = { name: string; role: string; bio: string; img: string };
 

@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import ProgramDetail from '@/components/programs/ProgramDetail';
 import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 import { IMG } from '@/lib/images';
+import { pageMetadata, ogImg } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Vijana Wheels | Driving & Mechanics Program',
+export const metadata: Metadata = pageMetadata({
+  title: 'Vijana Wheels — Driving & Mechanics',
   description:
     'Practical driving, traffic rules, road safety, vehicle maintenance, and basic mechanics, with placement at driving schools, garages, and transport companies.',
-};
+  path: '/programs/driving-mechanics/',
+  image: ogImg(IMG.engine),
+});
 
 export default function VijanaWheelsPage() {
   return (

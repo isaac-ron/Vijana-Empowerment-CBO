@@ -1,4 +1,10 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+// The admin area must never be indexed, even if a URL leaks.
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (

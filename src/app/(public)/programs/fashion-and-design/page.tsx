@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import ProgramDetail from '@/components/programs/ProgramDetail';
 import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 import { IMG } from '@/lib/images';
+import { pageMetadata, ogImg } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Vijana Fashion Forge | Fashion & Design Program',
+export const metadata: Metadata = pageMetadata({
+  title: 'Vijana Fashion Forge — Fashion & Design',
   description:
     'Tailoring, garment making, pattern making, sustainable fashion, illustration, branding, and entrepreneurship, with internships at local fashion houses.',
-};
+  path: '/programs/fashion-and-design/',
+  image: ogImg(IMG.sewing),
+});
 
 export default function FashionForgePage() {
   return (

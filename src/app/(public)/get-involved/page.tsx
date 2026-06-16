@@ -3,12 +3,14 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import DonationForm from '@/components/forms/DonationForm';
 import { IMG, uns } from '@/lib/images';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Get Involved | Vijana Empowerment Initiative',
+export const metadata: Metadata = pageMetadata({
+  title: 'Get Involved',
   description:
     'Donate, sponsor a youth, partner with us, or volunteer your skills. Help fund vocational training, mentorship, and entrepreneurship support in Sotik Sub-County.',
-};
+  path: '/get-involved/',
+});
 
 const WAYS = [
   { icon: 'volunteer_activism', title: 'One-time gift', body: 'Direct financial support that provides immediate resources to our ongoing training cohorts.', cta: 'Give now', href: '#donate-form' },

@@ -2,12 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { IMG, uns } from '@/lib/images';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Training Programs | Vijana Empowerment Initiative',
+export const metadata: Metadata = pageMetadata({
+  title: 'Training Programs',
   description:
     'Vocational training programs in fashion, beauty therapy, driving & mechanics, and computer skills — designed for youth in Sotik Sub-County, Bomet County.',
-};
+  path: '/programs/',
+});
 
 const TRACKS = [
   {

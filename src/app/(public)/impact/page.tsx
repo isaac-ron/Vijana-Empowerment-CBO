@@ -2,12 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { IMG, uns } from '@/lib/images';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Impact & Success Stories | Vijana Empowerment Initiative',
+export const metadata: Metadata = pageMetadata({
+  title: 'Impact & Success Stories',
   description:
     'See how youth in Sotik and Bomet County are turning vocational training into livelihoods, businesses, and community leadership.',
-};
+  path: '/impact/',
+});
 
 const STATS = [
   { n: <><span data-count="500">0</span>+</>, t: 'Youth trained', d: 'Equipped with vocational and digital skills for the modern economy.', c: '#9a1e14' },

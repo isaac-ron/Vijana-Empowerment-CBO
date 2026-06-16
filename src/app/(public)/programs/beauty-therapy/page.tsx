@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import ProgramDetail from '@/components/programs/ProgramDetail';
 import ProgramEnrollmentForm from '@/components/forms/ProgramEnrollmentForm';
 import { IMG } from '@/lib/images';
+import { pageMetadata, ogImg } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Glow with Vijana | Beauty Therapy Program',
+export const metadata: Metadata = pageMetadata({
+  title: 'Glow with Vijana — Beauty Therapy',
   description:
     'Hairdressing, styling, nail technology, makeup, and spa management with an emphasis on local products, salon management, and customer service.',
-};
+  path: '/programs/beauty-therapy/',
+  image: ogImg(IMG.salon),
+});
 
 export default function BeautyTherapyPage() {
   return (
